@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#3273dc"><meta name="application-name" content="aiscarf&amp;blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="msapplication-TileColor" content="#3273dc"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="aiscarf&amp;blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://aiscarf.github.io/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://aiscarf.github.io/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://aiscarf.github.io"},"headline":"Hexo","image":["http://aiscarf.github.io/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://aiscarf.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/aiscarf/hexo"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-08-10T14:00:00.000Z" title="2021/8/10 22:00:00">2021-08-10</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-12-22T13:49:52.065Z" title="2023/12/22 21:49:52">2023-12-22</time></span><span class="level-item"><a class="link-muted" href="/categories/%E6%90%AD%E5%BB%BABlog/">搭建Blog</a></span><span class="level-item">9 minutes read (About 1321 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/10/learn_markdown/">Markdown 语法学习</a></h1><div class="content"><h2 id="一.标题">一.标题</h2>
+<p>在想要设置为标题的文字前面加#来表示 一个#是一级标题, 二个#是二级标题,
+以此类推. 支持六级标题. &gt; 注: 标准语法一般在#后跟个空格再写文字.</p>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<h1 id="这是一级标题">这是一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<h5 id="这是五级标题">这是五级标题</h5>
+<h6 id="这是六级标题">这是六级标题</h6>
+<hr>
+<h2 id="二.字体">二.字体</h2>
+<ul>
+<li><strong>加粗</strong></li>
+</ul>
+<p>要加粗的文字左右分别用两个*号包起来</p>
+<ul>
+<li><strong>斜体</strong></li>
+</ul>
+<p>要倾斜的文字左右分别用一个*号包起来</p>
+<ul>
+<li><strong>斜体加粗</strong></li>
+</ul>
+<p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
+<ul>
+<li><strong>删除线</strong></li>
+</ul>
+<p>要加删除线的文字左右分别用两个~~号包起来</p>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<p><strong>这是加粗的文字</strong> <em>这是倾斜的文字</em>
+<strong><em>这是斜体加粗的文字</em></strong>
+<del>这是加删除线的文字</del></p>
+<hr>
+<h2 id="三.引用">三.引用</h2>
+<p>在引用的文字前加&gt;即可. 引用也可以嵌套, 如加两个&gt;&gt;
+三个&gt;&gt;&gt; n个...</p>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<blockquote>
+<p>这是引用的内容 &gt;这是引用的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</p>
+</blockquote>
+<hr>
+<h2 id="四.分割线">四.分割线</h2>
+<p>三个或者三个以上的-或者*都可以. (因笔者要书写LaTeX排版的数学公式,
+已将hexo默认的渲染引擎改为pandoc, 经测试分割线只能使用一种---了)
+示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----	// pandoc不支持三个的</span><br><span class="line">***		// pandoc不支持</span><br><span class="line">*****	// pandoc不支持</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<hr>
+<h2 id="五.图片">五.图片</h2>
+<p>语法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &#x27;&#x27;图片titile&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">图片alt即使显示在图片下面的文字, 相当于对图片内容的解释.</span><br><span class="line">图片title就是图片的标题, 当鼠标移到图片上时显示的内容. title可加可不加</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<figure>
+<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" title="区块链" alt="blockchain">
+<figcaption aria-hidden="true">blockchain</figcaption>
+</figure>
+<p><strong>上传本地图片直接点击导航栏的图片标志，选择图片即可</strong></p>
+<p>markdown格式追求的是简单、多平台统一。那么图片的存储就是一个问题，需要用图床，提供统一的外链，这样就不用在不同的平台去处理图片的问题了。才能做到书写一次，各处使用。</p>
+<hr>
+<h2 id="六.超链接">六.超链接</h2>
+<p>语法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">titile可加可不加</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[百度](http://baidu.com)</span><br><span class="line">[GitHub](http://gitHub.com)</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<p><a target="_blank" rel="noopener" href="http://baidu.com">百度</a> <a target="_blank" rel="noopener" href="http://gitHub.com">GitHub</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">示例</span><br><span class="line">&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="七.列表">七.列表</h2>
+<p><strong>无序列表</strong></p>
+<p>语法: 无序列表用 - + * 任何一种都可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ul>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ul>
+<p><strong>有序列表</strong></p>
+<p>语法: 数字加点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br><span class="line"></span><br><span class="line">注意: 序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<ol type="1">
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<p><strong>列表嵌套</strong></p>
+<p>在下一级之前敲三个空格即可</p>
+<ul>
+<li>一级无序列表内容
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul></li>
+<li>一级无序列表内容
+<ol type="1">
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ol></li>
+</ul>
+<ol type="1">
+<li>一级无序列表内容
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul></li>
+<li>一级无序列表内容
+<ol type="1">
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ol></li>
+</ol>
+<hr>
+<h2 id="八.表格">八.表格</h2>
+<p>语法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">姓名|技能|排行</span><br><span class="line">--|:--:|--:</span><br><span class="line">刘备|哭|大哥</span><br><span class="line">关羽|打|二哥</span><br><span class="line">张飞|骂|三弟</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<table>
+<thead>
+<tr class="header">
+<th>姓名</th>
+<th style="text-align: center;">技能</th>
+<th style="text-align: right;">排行</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>刘备</td>
+<td style="text-align: center;">哭</td>
+<td style="text-align: right;">大哥</td>
+</tr>
+<tr class="even">
+<td>关羽</td>
+<td style="text-align: center;">打</td>
+<td style="text-align: right;">二哥</td>
+</tr>
+<tr class="odd">
+<td>张飞</td>
+<td style="text-align: center;">骂</td>
+<td style="text-align: right;">三弟</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="九.代码">九.代码</h2>
+<p>语法: 单行代码: 代码之间分别用一个反引号包起来 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`代码内容`</span><br></pre></td></tr></table></figure></p>
+<p>代码块: 代码之间分别用三个反引号包起来, 且两边的反引号单独占一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">  function fun()&#123;</span><br><span class="line">       echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">  fun();</span><br><span class="line">````</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注: 为了防止转译, 多加了个`符号实际是没有的.</p>
+</blockquote>
+<p>效果如下:</p>
+<p>单行代码</p>
+<p><code>代码内容</code></p>
+<p>代码块 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	 echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="十.流程图">十.流程图</h2>
+<p>示例: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">```flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;```</span><br></pre></td></tr></table></figure></p>
+<p>效果如下:
+<code>flow st=&gt;start: 开始 op=&gt;operation: My Operation cond=&gt;condition: Yes or No? e=&gt;end st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op &amp;</code></p>
+<blockquote>
+<p>注: hexo 暂不支持流程图.</p>
+</blockquote>
+<hr>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-08-10T14:00:00.000Z" title="2021/8/10 22:00:00">2021-08-10</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-12-22T13:49:52.067Z" title="2023/12/22 21:49:52">2023-12-22</time></span><span class="level-item"><a class="link-muted" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></span><span class="level-item">an hour read (About 7331 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/10/note_building_a_2d_game_physics_engine1/">读书笔记《Building a 2D Game Physics Engine》（一）</a></h1><div class="content"><h2 id="一.pdf书本网盘链接">一.pdf书本网盘链接</h2>
+<p>链接：https://pan.baidu.com/s/1J5qSRKfQKQsMIgBMZYQb3w</p>
+<p>提取码：fcr2</p>
+<h2 id="二.书上的成品展示">二.书上的成品展示</h2>
+<ol type="1">
+<li>按<strong><em>↑↓</em></strong>键切换选择的物体.</li>
+<li>按<strong><em>WASD</em></strong>键控制选择的物体上下左右移动.</li>
+<li>按<strong><em>Q/E</em></strong>键控制选择的物体顺/逆时针旋转.</li>
+<li>按<strong><em>IJKL</em></strong>键控制选择的物体的线性速度.</li>
+<li>按<strong><em>U/O</em></strong>键控制选择的物体的角速度.</li>
+<li>按<strong><em>Z/X</em></strong>键控制选择的物体的质量</li>
+<li>按<strong><em>C/V</em></strong>键控制选择的物体的摩擦力</li>
+<li>按<strong><em>B/N</em></strong>键控制选择的物体的弹性系数</li>
+<li>按<strong><em>英文的逗号</em></strong>,键控制物理引擎运动是否启动</li>
+</ol>
+
+<html>
+    <head>
+        <title>读书笔记《Building a 2D Game Physics Engine》</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onkeydown="return userControl(event);" onload="var game = new MyGame();
+          gEngine.Core.initializeEngineCore()">
+        <table style="padding:2px">
+            <tr>
+                <td>
+                    <div>
+                        <canvas id="canvas">
+                            
+                        </canvas>
+                    </div>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+			<tr>
+				<td>
+					<div id="uiEchoString"> </div>
+                </td>
+			</tr>
+        </table>
+        <!-- <script type="text/javascript" src="Lib/Vec2.js"></script> -->
+        <!-- <script type="text/javascript" src="MyGame.js"></script> -->
+        <!-- <script type="text/javascript" src="EngineCore/Core.js"></script> -->
+        <!-- <script type="text/javascript" src="EngineCore/UserControl.js"></script> -->
+        <!-- <script type="text/javascript" src="RigidBody/RigidShape.js"></script> -->
+        <!-- <script type="text/javascript" src="RigidBody/Rectangle.js"></script> -->
+        <!-- <script type="text/javascript" src="RigidBody/Circle.js"></script> -->
+        <!-- <script type="text/javascript" src="CollisionInfo.js"></script> -->
+		
+		<script> 
+			var Vec2 = function(x,y){
+				this.x = x;
+				this.y = y;
+			};
+
+			Vec2.prototype.length = function(){
+				return Math.sqrt(this.x * this.x + this.y * this.y);  
+			};
+
+			Vec2.prototype.add = function(vec){
+			  return new Vec2(vec.x + this.x, vec.y + this.y);  
+			};
+
+			// a-b =====  b->a
+			Vec2.prototype.subtract = function(vec){
+			  return new Vec2(this.x - vec.x, this.y - vec.y);  
+			};
+
+			Vec2.prototype.scale = function(n){
+			  return new Vec2(this.x * n, this.y * n);  
+			};
+
+			Vec2.prototype.dot = function(vec){
+				return (this.x * vec.x + this.y * vec.y);
+			};
+
+			Vec2.prototype.cross = function(vec){
+			  return (this.x * vec.y - this.y * vec.x);  
+			};
+
+			Vec2.prototype.rotate = function(center, angle){
+			  // rotate in counterclockwise =>逆时针
+			  var r = [];
+			  var x = this.x - center.x;
+			  var y = this.y - center.y;
+			  r[0] = x * Math.cos(angle) - y * Math.sin(angle);
+			  r[1] = x * Math.sin(angle) + y * Math.cos(angle);
+			  r[0] += center.x;
+			  r[1] += center.y;
+			  return new Vec2(r[0], r[1]);
+			};
+
+			Vec2.prototype.normalize = function(){
+				var len = this.length();
+				if(len>0){
+					len = 1/len;
+				}
+				return new Vec2(this.x * len, this.y * len);
+			};
+
+			Vec2.prototype.distance = function(vec){
+			  var x = this.x - vec.x;
+			  var y = this.y - vec.y;
+			  return Math.sqrt(x * x + y * y);
+			};
+		</script>
+		
+		<script>
+			function MyGame(){
+				var width = gEngine.Core.mWidth;
+				var height = gEngine.Core.mHeight;
+				console.log(width);
+				console.log(height);
+			//    var r1 = new Circle(new Vec2(width / 2, height / 2),
+			//        Math.random() * 10 + 20);
+				var r1 = new Rectangle(
+					new Vec2(width / 2, height / 2), 
+					30, 60, 10, 1, 0);
+				r1.mAcceleration = new Vec2(10, 0);
+				var r2 = new Rectangle(
+					new Vec2(width / 2, height / 2), 
+					40, 20, 100, 1, 0);
+				r2.mAcceleration = new Vec2(-5, 0);
+				var up = new Rectangle(new Vec2(width / 2, 0), width, 3, 0, 1, 1);
+				var down = new Rectangle(new Vec2(width / 2, height), width, 3, 0, 1, 1);
+				var left = new Rectangle(new Vec2(0, height / 2), 3, height, 0, 1, 1);
+				var right = new Rectangle(new Vec2(width, height / 2), 3, height, 0, 1, 1);
+			}
+		</script>
+    
+		<script>
+			var gEngine = gEngine || {};
+			gEngine.Core = (function () {
+
+				var mCanvas, mContext, mWidth = 650, mHeight = 650;
+				mCanvas = document.getElementById('canvas');
+				mContext = mCanvas.getContext('2d');
+				mCanvas.height = mHeight;
+				mCanvas.width = mWidth;
+
+				var mAllObjects = [];
+				var mGravity = new Vec2(0,10);
+				var mMovement = false;
+
+				var mCurrentTime, mElapsedTime, mPreviousTime = Date.now(), mLagTime = 0;
+				var kFPS = 60; // Frames per second
+				var kFrameTime = 1 / kFPS;
+				var mUpdateIntervalInSeconds = kFrameTime;
+				var kMPF = 1000 * kFrameTime; // Milliseconds per frame.
+
+				var runGameLoop = function () {
+					requestAnimationFrame(function () {
+						runGameLoop();
+					});
+					
+					// compute how much time has elapsed since the last RunLoop
+					mCurrentTime = Date.now();
+					mElapsedTime = mCurrentTime - mPreviousTime;
+					mPreviousTime = mCurrentTime;
+					mLagTime += mElapsedTime;
+					// Update the game the appropriate number of times.
+					// Update only every Milliseconds per frame.
+					// If lag larger then update frames, update until caught up.
+					mContext.clearRect(0, 0, mWidth, mHeight);
+					while(mLagTime >= kMPF){
+						mLagTime -= kMPF;
+						gEngine.Physics.collision();
+						update();
+					}
+					updateUIEcho();
+					draw();
+				};
+				
+				var update = function () {
+					var i;
+					for (i = 0; i < mAllObjects.length; i++) {
+						mAllObjects[i].update(mContext);
+					}
+				};
+
+			var updateUIEcho = function () {
+			 document.getElementById("uiEchoString").innerHTML = 
+			 "<p><b>Selected Object:</b>:</p>" +
+			 "<ul style=\"margin:-10px\">" +
+			 "<li>Id: " + gObjectNum + "</li>" +
+			 "<li>Center: " + mAllObjects[gObjectNum].mCenter.x.toPrecision(3) + 
+			 "," + mAllObjects[gObjectNum].mCenter.y.toPrecision(3) + "</li>" + 
+			 "<li>Angle: " + mAllObjects[gObjectNum].mAngle.toPrecision(3) + "</li>" +
+			 "<li>Velocity: " + mAllObjects[gObjectNum].mVelocity.x.toPrecision(3) + 
+			 "," + mAllObjects[gObjectNum].mVelocity.y.toPrecision(3) + "</li>" +
+			 "<li>AngluarVelocity: " + mAllObjects[gObjectNum].mAngularVelocity.
+			toPrecision(3) + "</li>" +
+			 "<li>Mass: " + 1 / mAllObjects[gObjectNum].mInvMass.toPrecision(3) + 
+			"</li>" +
+			 "<li>Friction: " + mAllObjects[gObjectNum].mFriction.toPrecision(3) + 
+			"</li>" +
+			 "<li>Restitution: " + mAllObjects[gObjectNum].mRestitution.
+			toPrecision(3) + "</li>" +
+			 "<li>Movement: " + gEngine.Core.mMovement + "</li>" +
+			 "</ul> <hr>" +
+			 "<p><b>Control</b>: of selected object</p>" +
+			 "<ul style=\"margin:-10px\">" +
+			 "<li><b>Num</b> or <b>Up/Down Arrow</b>: Select Object</li>" +
+			 "<li><b>WASD</b> + <b>QE</b>: Position [Move + Rotate]</li>" +
+			 "<li><b>IJKL</b> + <b>UO</b>: Velocities [Linear + Angular]</li>" +
+			 "<li><b>Z/X</b>: Mass [Decrease/Increase]</li>" +
+			 "<li><b>C/V</b>: Frictrion [Decrease/Increase]</li>" +
+			 "<li><b>B/N</b>: Restitution [Decrease/Increase]</li>" +
+			 "<li><b>,</b>: Movement [On/Off]</li>" +
+			 "</ul> <hr>" +
+			 "<b>F/G</b>: Spawn [Rectangle/Circle] at selected object" +
+			 "<p><b>H</b>: Excite all objects</p>" +
+			 "<p><b>R</b>: Reset System</p>" +
+			 "<hr>"; 
+			};
+
+				var draw = function () {
+			//        console.log("gObjectNum = " + gObjectNum);
+			//        console.log("mAllObjects = "+ mAllObjects.length);
+			//        mContext.clearRect(0, 0, mWidth, mHeight);
+					var i;
+					for (i = 0; i < mAllObjects.length; i++) {
+						mContext.strokeStyle = 'blue';
+						if (i === gObjectNum) {
+							mContext.strokeStyle = 'red';
+						}
+						mAllObjects[i].draw(mContext);
+					}
+				};
+
+				var initializeEngineCore = function () {
+					runGameLoop();
+				};
+
+				var mPublic = {
+					initializeEngineCore: initializeEngineCore,
+					mAllObjects: mAllObjects,
+					mWidth: mWidth,
+					mHeight: mHeight,
+					mContext: mContext,
+					mGravity: mGravity,
+					mUpdateIntervalInSeconds: mUpdateIntervalInSeconds,
+					mMovement: mMovement
+				};
+				return mPublic;
+			}());
+
+			gEngine.Physics = (function () {
+				
+				var mPositionalCorrectionFlag = true;
+				// number of relaxation iteration
+				var mRelaxationCount = 15;
+				// percentage of separation to project objects
+				var mPosCorrectionRate = 0.8;
+				
+				var drawCollisionInfo = function (collisionInfo, context) {
+					context.beginPath();
+					context.moveTo(collisionInfo.mStart.x, collisionInfo.mStart.y);
+					context.lineTo(collisionInfo.mEnd.x, collisionInfo.mEnd.y);
+					context.closePath();
+					context.strokeStyle = "red";
+					context.stroke();
+				};
+				
+				var collision = function () {
+					var i, j, k;
+					var collisionInfo = new CollisionInfo();
+
+					for (k = 0; k < mRelaxationCount; k++) {
+						for (i = 0; i < gEngine.Core.mAllObjects.length; i++) {
+							for (j = 0; j < gEngine.Core.mAllObjects.length; j++) {
+								if (i === j) {
+									continue;
+								}
+								if (gEngine.Core.mAllObjects[i].boundTest(gEngine.Core.mAllObjects[j])) {
+									if (gEngine.Core.mAllObjects[i].collisionTest(gEngine.Core.mAllObjects[j], collisionInfo)) {
+										if (collisionInfo.getNormal().dot(
+											gEngine.Core.mAllObjects[j].mCenter.subtract(
+											gEngine.Core.mAllObjects[i].mCenter)) < 0) {
+				//                            collisionInfo.changeDir();
+										}
+										// draw collision info (a black line that shows normal)
+										drawCollisionInfo(collisionInfo, gEngine.Core.mContext);
+										resolveCollision(gEngine.Core.mAllObjects[i], gEngine.Core.mAllObjects[j], collisionInfo);
+									}
+
+									gEngine.Core.mContext.strokeStyle = 'green';
+									gEngine.Core.mAllObjects[i].draw(gEngine.Core.mContext);
+									gEngine.Core.mAllObjects[j].draw(gEngine.Core.mContext);
+								}
+							}
+						}
+					}
+				};
+				
+				var positionalCorrection = function (s1, s2, collisionInfo){
+					var s1InvMass = s1.mInvMass;
+					var s2InvMass = s2.mInvMass;
+					
+					var num = collisionInfo.getDepth() / (s1InvMass + s2InvMass) * mPosCorrectionRate;
+					var correctionAmount = collisionInfo.getNormal().scale(num);
+					
+					s1.move(correctionAmount.scale(-s1InvMass));
+					s2.move(correctionAmount.scale(s2InvMass));
+				};
+				
+				var  resolveCollision = function (s1, s2, collisionInfo){
+					if ((s1.mInvMass === 0) && (s2.mInvMass === 0)) {
+						return;
+					}
+					// correct positions
+					if (gEngine.Physics.mPositionalCorrectionFlag) {
+						positionalCorrection(s1, s2, collisionInfo);
+					}
+					
+					var n = collisionInfo.getNormal();
+					
+					var start = collisionInfo.mStart.scale(s2.mInvMass / (s1.mInvMass + s2.mInvMass));
+					var end = collisionInfo.mEnd.scale(s1.mInvMass / (s1.mInvMass + s2.mInvMass));
+					var p = start.add(end);
+					// r is vector form center of shape to collision point
+					var r1 = p.subtract(s1.mCenter);
+					var r2 = p.subtract(s2.mCenter);
+					
+					// newV = V + mAngularVelocity cross R
+					var v1 = s1.mVelocity.add(new Vec2(-1 * s1.mAngularVelocity * r1.y, s1.mAngularVelocity * r1.x));
+					var v2 = s2.mVelocity.add(new Vec2(-1 * s2.mAngularVelocity * r2.y, s2.mAngularVelocity * r2.x));
+					var relativeVelocity = v2.subtract(v1);
+					
+					// Relative velocity in normal direction
+					var rVelocityInNormal = relativeVelocity.dot(n);
+					
+					// if objects moving apart ignore
+					if (rVelocityInNormal > 0) {
+						return;
+					}
+					
+					// R cross N
+					var R1crossN = r1.cross(n);
+					var R2crossN = r2.cross(n);
+					
+					// compute and apply response impulses for each object
+					var newRestitution = Math.min(s1.mRestitution, s2.mRestitution);
+					var newFriction = Math.min(s1.mFriction, s2.mFriction);
+					
+					// Calc impulse scalar
+					// Reference: http://www.myphysicslab.com/collision.html
+					var jN = -(1 + newRestitution) * rVelocityInNormal;
+					jN = jN / (s1.mInvMass + s2.mInvMass + 
+							R1crossN * R1crossN * s1.mInertia + 
+							R2crossN * R2crossN * s2.mInertia);
+										
+					
+					
+					// impulse is in direction of normal ( from s1 to s2)
+					var impulse = n.scale(jN);
+					// impulse = F dt = m * deltaV
+					// deltaV = impulse / m
+					s1.mVelocity = s1.mVelocity.subtract(impulse.scale(s1.mInvMass));
+					s2.mVelocity = s2.mVelocity.add(impulse.scale(s2.mInvMass));
+					
+					s1.mAngularVelocity -= R1crossN * jN * s1.mInertia;
+					s2.mAngularVelocity += R2crossN * jN * s2.mInertia;
+					
+					// impulse is in direction of tangent
+					var tangent = relativeVelocity.subtract(n.scale(relativeVelocity.dot(n)));
+					// relativeVelocity.dot(tangent) should less than 0
+					tangent = tangent.normalize().scale(-1);
+					
+					var R1crossT = r1.cross(tangent);
+					var R2crossT = r2.cross(tangent);
+					
+					var jT = -(1 + newRestitution) * relativeVelocity.dot(tangent) * newFriction;
+					jT = jT / (s1.mInvMass + s2.mInvMass +
+							R1crossT * R1crossT * s1.mInertia +
+							R2crossT * R2crossT * s2.mInertia);
+					
+					// friction should be less than force in normal direction
+					if (jT > jN) jT = jN;
+					// impulse is form s1 to s2 (in opposite direction of velocity
+					impulse = tangent.scale(jT);
+					
+					s1.mVelocity = s1.mVelocity.subtract(impulse.scale(s1.mInvMass));
+					s2.mVelocity = s2.mVelocity.add(impulse.scale(s2.mInvMass));
+					
+					
+					s1.mAngularVelocity -= R1crossT * jT * s1.mInertia;
+					s2.mAngularVelocity -= R2crossT * jT * s2.mInertia;
+				};
+				
+				var mPublic = {
+					collision: collision,
+					mPositionalCorrectionFlag: mPositionalCorrectionFlag
+				};
+				return mPublic;
+			}());
+		</script>
+	
+		<script>
+			var gObjectNum = 0;
+
+			function userControl(event){
+				var keycode;
+				var width = gEngine.Core.mWidth;
+				var height = gEngine.Core.mHeight;
+				var context = gEngine.Core.mContext;
+				
+				if(window.event){ // IE
+					keycode = event.keyCode;
+				}
+				else if(event.which){ // Netscape/Firefox/Opera
+					keycode = event.which;
+				}
+				
+				if(keycode === 70){ //f
+					var r1 = new Rectangle(
+						new Vec2(gEngine.Core.mAllObjects[gObjectNum].mCenter.x,
+							gEngine.Core.mAllObjects[gObjectNum].mCenter.y),
+						Math.random() * 30 + 10, 
+						Math.random() * 30 + 10,
+						Math.random() * 30, 
+						Math.random(), 
+						Math.random());
+				}
+				if(keycode === 71){ //g
+					var r1 = new Circle(
+						new Vec2(gEngine.Core.mAllObjects[gObjectNum].mCenter.x,
+							gEngine.Core.mAllObjects[gObjectNum].mCenter.y),
+						Math.random() * 10 + 20,  
+						Math.random() * 30,
+						Math.random(), 
+						Math.random());
+				}
+				
+				if (keycode === 72) { //H
+					var i;
+					for (i = 0; i < gEngine.Core.mAllObjects.length; i++) {
+						if (gEngine.Core.mAllObjects[i].mInvMass !== 0) {
+							gEngine.Core.mAllObjects[i].mVelocity = 
+									new Vec2(Math.random() * 20 - 10, Math.random() * 20 - 10);
+						}
+					}
+				}
+				
+				if (keycode >= 48 && keycode <= 57){
+					if (keycode - 48 < gEngine.Core.mAllObjects.length) {
+						gObjectNum = keycode - 48;
+					}
+				}
+				if (keycode === 38) {
+					if (gObjectNum > 0) {
+						gObjectNum--;
+					}
+				}
+				if (keycode === 40) {
+					if (gObjectNum < gEngine.Core.mAllObjects.length-1){
+						gObjectNum++;
+					}
+				}
+				
+				// move with WASD keys
+				if (keycode === 87) { //W
+					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(0, -10));
+				}
+				if (keycode === 83) { // S
+					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(0, +10));
+				}
+				if (keycode === 65) { //A
+					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(-10, 0));
+				}
+				if (keycode === 68) { //D
+					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(10, 0));
+				}
+				// Rotate with QE keys
+				if (keycode === 81) { //Q
+					gEngine.Core.mAllObjects[gObjectNum].rotate(-0.1);
+				}
+				if (keycode === 69) { //E
+					gEngine.Core.mAllObjects[gObjectNum].rotate(0.1);
+				}
+				// Toggle gravity with the H key
+				if (keycode === 72) { //H
+					console.log(gEngine.Core.mAllObjects[gObjectNum].mFix);
+					if(gEngine.Core.mAllObjects[gObjectNum].mFix === 0)
+						gEngine.Core.mAllObjects[gObjectNum].mFix = 1;
+					else gEngine.Core.mAllObjects[gObjectNum].mFix = 0;
+				}
+				if (keycode === 82) { //R
+					gEngine.Core.mAllObjects.splice(5, gEngine.Core.mAllObjects.length);
+					gObjectNum = 0;
+				}
+				
+				
+				if (keycode === 73) { //I
+					gEngine.Core.mAllObjects[gObjectNum].mVelocity.y -= 1;
+				}
+				if (keycode === 75) { //K
+					gEngine.Core.mAllObjects[gObjectNum].mVelocity.y += 1;
+				}
+				if (keycode === 74) { //J
+					gEngine.Core.mAllObjects[gObjectNum].mVelocity.x -= 1;
+				}
+				if (keycode === 76) { //L
+					gEngine.Core.mAllObjects[gObjectNum].mVelocity.x += 1;
+				}
+				
+				
+				if (keycode === 85) { //U
+					gEngine.Core.mAllObjects[gObjectNum].mAngularVelocity -= 0.1;
+				}
+				if (keycode === 79) { //O
+					gEngine.Core.mAllObjects[gObjectNum].mAngularVelocity += 0.1;
+				}
+				
+				if (keycode === 90) { //Z
+					gEngine.Core.mAllObjects[gObjectNum].updateMass(-1);
+				}
+				if (keycode === 88) { //X
+					gEngine.Core.mAllObjects[gObjectNum].updateMass(1);
+				}
+				
+				if (keycode === 67) { //C
+					gEngine.Core.mAllObjects[gObjectNum].mFriction -= 0.01;
+				}
+				if (keycode === 86) { //V
+					gEngine.Core.mAllObjects[gObjectNum].mFriction += 0.01;
+				}
+				
+				if (keycode === 66) { //B
+					gEngine.Core.mAllObjects[gObjectNum].mRestitution -= 0.01;
+				}
+				if (keycode === 78) { //N
+					gEngine.Core.mAllObjects[gObjectNum].mRestitution += 0.01;
+				}
+				
+				if (keycode === 188) { //'188
+					gEngine.Core.mMovement = !gEngine.Core.mMovement;
+				}
+			}
+		</script>
+	
+		<script>
+			function RigidShape(center, mass, friction, restitution){
+				this.mCenter = center;
+
+				
+				this.mInertia = 0;
+				if (mass !== undefined) {
+					this.mInvMass = mass;
+				}else{
+					this.mInvMass = 1;
+				}
+				
+				if (friction !== undefined) {
+					this.mFriction = friction;
+				}else{
+					this.mFriction = 0.8;
+				}
+				
+				if (restitution !== undefined) {
+					this.mRestitution = restitution;
+				}else{
+					this.mRestitution = 0.2;
+				}
+				
+				this.mVelocity = new Vec2(0, 0);
+				
+				if (this.mInvMass !== 0) {
+					this.mInvMass = 1/ this.mInvMass;
+					this.mAcceleration = gEngine.Core.mGravity;
+				}else{
+					this.mAcceleration = new Vec2(0, 0);
+				}
+				
+				// angle
+				this.mAngle = 0;
+				// negetive-- clockwise
+				// positive-- counterclockwise
+				this.mAngularVelocity = 0;
+				this.mAngularAcceleration = 0;
+				
+				this.mBoundRadius = 0;
+				gEngine.Core.mAllObjects.push(this);
+			}
+
+			RigidShape.prototype.update = function () { 
+				if (gEngine.Core.mMovement) {
+					var dt = gEngine.Core.mUpdateIntervalInSeconds;
+					// v += a*t
+					this.mVelocity = this.mVelocity.add(this.mAcceleration.scale(dt));
+					// s += v*t
+					this.move(this.mVelocity.scale(dt));
+					
+					this.mAngularVelocity += this.mAngularAcceleration * dt;
+					this.rotate(this.mAngularVelocity * dt);
+				}
+			};
+
+			RigidShape.prototype.updateMass = function (delta){
+				var mass;
+				if (this.mInvMass !== 0) {
+					mass = 1 / this.mInvMass;
+				}else{
+					mass = 0;
+				}
+				mass += delta;
+				if (mass <= 0) {
+					this.mInvMass = 0;
+					this.mVelocity = new Vec2(0, 0);
+					this.mAccelartion = new Vec2(0, 0);
+					this.mAngularVelocity = 0;
+					this.mAngularAcceleration = 0;
+				}else{
+					this.mInvMass = 1 / mass;
+					this.mAcceleration = gEngine.Core.mGravity;
+				}
+				this.updateInertia();
+			};
+
+			RigidShape.prototype.updateInertia = function(){
+				// subclass must define this.
+				// must work with inverted this.mInvMass
+			};
+
+			RigidShape.prototype.boundTest = function (otherShape) {
+				var vFrom1to2  = otherShape.mCenter.subtract(this.mCenter);
+				var rSum = this.mBoundRadius + otherShape.mBoundRadius;
+				var dist = vFrom1to2.length();
+				if (dist > rSum) {
+					return false; // not overlapping
+				}
+				return true;
+			};
+		</script>
+	
+		<script>
+			var Rectangle = function(center, width, height, mass, friction, restitution){
+			RigidShape.call(this, center, mass, friction, restitution);
+			this.mType = "Rectangle";
+			this.mWidth = width;
+			this.mHeight = height;
+			this.mBoundRadius = Math.sqrt(width*width + height*height)/2;
+		//    this.mFix = fix;
+			this.mVertex = [];
+			this.mFaceNormal = [];
+			
+			this.mVertex[0] = new Vec2(center.x - width / 2, center.y - height / 2); // TopLeft
+			this.mVertex[1] = new Vec2(center.x + width / 2, center.y - height / 2); // TopRight
+			this.mVertex[2] = new Vec2(center.x + width / 2, center.y + height / 2); // BottomRight
+			this.mVertex[3] = new Vec2(center.x - width / 2, center.y + height / 2); // BottomLeft
+			
+			this.mFaceNormal[0] = this.mVertex[1].subtract(this.mVertex[2]).normalize(); // Top
+			this.mFaceNormal[1] = this.mVertex[2].subtract(this.mVertex[3]).normalize(); // Right
+			this.mFaceNormal[2] = this.mVertex[3].subtract(this.mVertex[0]).normalize(); // Bottom
+			this.mFaceNormal[3] = this.mVertex[0].subtract(this.mVertex[1]).normalize(); // Left
+			
+			this.updateInertia();
+		};
+
+		var prototype = Object.create(RigidShape.prototype);
+		prototype.constructor = Rectangle;
+		Rectangle.prototype = prototype;
+
+		Rectangle.prototype.draw = function(context){
+			context.save();
+			context.translate(this.mVertex[0].x, this.mVertex[0].y);
+			context.rotate(this.mAngle);
+			context.strokeRect(0, 0, this.mWidth, this.mHeight);
+			context.restore();
+		};
+
+		Rectangle.prototype.move = function (v) {
+			var i;
+			for (i  = 0;  i < this.mVertex.length; i++) {
+				this.mVertex[i] = this.mVertex[i].add(v);
+			}
+			this.mCenter = this.mCenter.add(v);
+			return this;
+		};
+
+		Rectangle.prototype.rotate = function (angle) {
+			this.mAngle += angle;
+			var i;
+			for (i = 0; i < this.mVertex.length; i++) {
+				this.mVertex[i] = this.mVertex[i].rotate(this.mCenter, angle);
+			}
+			this.mFaceNormal[0] = this.mVertex[1].subtract(this.mVertex[2]).normalize();
+			this.mFaceNormal[1] = this.mVertex[2].subtract(this.mVertex[3]).normalize();
+			this.mFaceNormal[2] = this.mVertex[3].subtract(this.mVertex[0]).normalize();
+			this.mFaceNormal[3] = this.mVertex[0].subtract(this.mVertex[1]).normalize();
+			return this;
+		};
+
+		Rectangle.prototype.collisionTest = function (otherShape, collisionInfo) {
+			var status = false;
+			if (otherShape.mType === "Circle") {
+				status =  this.collideRectCirc(otherShape, collisionInfo);
+			}else{
+				status = this.collidedRectRect(this, otherShape, collisionInfo);
+			}
+			return status;
+		};
+
+		Rectangle.prototype.findSupportPoint = function (dir, ptOnEdge) {
+			// the longest project length
+			var vToEdge;
+			var projection;
+			// initialize the computed results
+			var tmpSupport = {
+				mSupportPointDist : -9999999,
+				mSupportPoint : null
+			};
+		//    tmpSupport.mSupportPointDist = -9999999;
+		//    tmpSupport.mSupportPoint = null;
+			// check each vector of other object
+			var i = 0;
+			for (i = 0; i < this.mVertex.length; i++) {
+				vToEdge = this.mVertex[i].subtract(ptOnEdge);
+				projection = vToEdge.dot(dir);
+				// find the longest distance with certain edge
+				// dir is -n direction, so the distance should be positive
+				if (projection > 0 && projection > tmpSupport.mSupportPointDist) {
+					tmpSupport.mSupportPoint = this.mVertex[i];
+					tmpSupport.mSupportPointDist = projection;
+				}
+			}
+			return tmpSupport;
+		};
+
+
+		Rectangle.prototype.findAxisLeastPenetration = function(otherRect, collisionInfo){
+			var n;
+			var supportPoint;
+			var bestDistance = 999999;
+			var bestIndex = null;
+			var hasSupport = true;
+			var i = 0;
+			while (hasSupport && i < this.mFaceNormal.length){
+				// Retrieve a face normal from A
+				n = this.mFaceNormal[i];
+				// use -n as direction and
+				// the vectex on edge i as point on edge
+				var dir = n.scale(-1);
+				var ptOnEdge = this.mVertex[i];
+				// find the support on B
+				// the point has longest distance with edge i
+				var tmpSupport = otherRect.findSupportPoint(dir, ptOnEdge);
+				hasSupport = tmpSupport.mSupportPoint !== null;
+				// get the shortest support point depth
+				if (hasSupport && tmpSupport.mSupportPointDist < bestDistance) {
+					bestDistance = tmpSupport.mSupportPointDist;
+					bestIndex = i;
+					supportPoint = tmpSupport.mSupportPoint;
+				}
+				i = i + 1;
+			}
+			if (hasSupport) {
+				// all four directions have support point
+				var bestVec = this.mFaceNormal[bestIndex].scale(bestDistance);
+				collisionInfo.setInfo(bestDistance, this.mFaceNormal[bestIndex], supportPoint.add(bestVec));
+			}
+			return hasSupport;
+		};
+
+		Rectangle.prototype.collidedRectRect = function(r1, r2, collisionInfo){
+			var status1 = false;
+			var status2 = false;
+			var collisionInfoR1 = new CollisionInfo();
+			var collisionInfoR2 = new CollisionInfo();
+			// find Axis of Separation for both rectangle
+			status1 = r1.findAxisLeastPenetration(r2, collisionInfoR1);
+			if (status1) {
+				status2 = r2.findAxisLeastPenetration(r1, collisionInfoR2);
+				if (status2) {
+					// choose the shorter normal as the normal
+					if (collisionInfoR1.getDepth() < collisionInfoR2.getDepth()) {
+						var depthVec = collisionInfoR1.getNormal().scale(collisionInfoR1.getDepth());
+						collisionInfo.setInfo(collisionInfoR1.getDepth(),collisionInfoR1.getNormal(),
+						collisionInfoR1.mStart.subtract(depthVec));
+					}else{
+						collisionInfo.setInfo(collisionInfoR2.getDepth(),
+						collisionInfoR2.getNormal().scale(-1),
+						collisionInfoR2.mStart);
+					}
+				}
+			}
+			return status1 && status2;
+		};
+
+		Rectangle.prototype.collideRectCirc = function (otherCir, collisionInfo){
+			// Step A: Compute the nearest edge
+			var i = 0;
+			var circ2Pos;
+			var projection;
+			var v;
+			var bestDistance = -9999999;
+			var nearestEdge;
+			var inside = false;
+			for (i = 0; i < 4; i++) {
+				// find the nearest edge for center of circle
+				circ2Pos = otherCir.mCenter;
+				v = circ2Pos.subtract(this.mVertex[i]);
+				projection = v.dot(this.mFaceNormal[i]);
+				if (projection > 0) {
+					// if the center of circle is outside of rectangle
+					bestDistance = projection;
+					nearestEdge = i;
+					inside = false;
+					break;
+				}
+				if (projection > bestDistance) {
+					bestDistance = projection;
+					nearestEdge = i;
+				}
+			}
+			// the center of circle is outside of rectangle
+			if (!inside) {
+				// Step B1: If center is in Region R1
+				// v1 is form left vertex of face to center of circle
+				// v2 is from left vertex of face to right vertex of face
+				var v1 = circ2Pos.subtract(this.mVertex[nearestEdge]);
+				var v2 = this.mVertex[(nearestEdge + 1) % 4].subtract(this.mVertex[nearestEdge]);
+				var dot = v1.dot(v2);
+				// Region R1
+				if (dot < 0) {
+					// the center of circle is in corner region of mVertex[nearestEdge]
+					var dis = v1.length();
+					// compare the distance with radium to decide collision
+					if (dis > otherCir.mRadius) {
+						return false;
+					}
+					var normal = v1.normalize();
+					var radiusVec = normal.scale(-otherCir.mRadius);
+					collisionInfo.setInfo(otherCir.mRadius - dis, normal, circ2Pos.add(radiusVec));
+				}
+				// Step B2: If center is in Region R2
+				else {
+					// the center of circle is in corner region of mVertex[nearestEdge+1]
+					// v1 is from right vertex of face to center of circle
+					// v2 if form right vertex of face to left vertex of face
+					var v1 = circ2Pos.subtract(this.mVertex[(nearestEdge + 1) % 4]);
+					var v2 = v2.scale(-1);
+					var dot = v1.dot(v2);
+					if (dot < 0) {
+						var dis = v1.length();
+						if (dis > otherCir.mRadius) {
+							return false;
+						}
+						var normal = v1.normalize();
+						var radiusVec = normal.scale(-otherCir.mRadius);
+						collisionInfo.setInfo(otherCir.mRadius - dis, normal, circ2Pos.add(radiusVec));
+					} 
+					// Step B3: If center is in Region R3
+					else {
+						//the center of circle is in face region of face[nearestEdge]
+						if (bestDistance < otherCir.mRadius) {
+							var radiusVec = this.mFaceNormal[nearestEdge].scale(otherCir.mRadius);
+							collisionInfo.setInfo(otherCir.mRadius - bestDistance, this.mFaceNormal[nearestEdge], circ2Pos.subtract(radiusVec));
+						}
+						else{
+							return false;
+						}
+					}
+				}
+				
+			} else {
+				// Step C: If center is inside
+				var radiusVec = this.mFaceNormal[nearestEdge].scale(otherCir.mRadius);
+				collisionInfo.setInfo(otherCir.mRadius - bestDistance, this.mFaceNormal[nearestEdge], circ2Pos.subtract(radiusVec));
+			}
+			return true;
+		};
+
+		Rectangle.prototype.updateInertia = function(){
+			// Expect this.mInvMass to be already inverted!
+			if (this.mInvMass === 0) {
+				this.mInertia = 0;
+			}else{
+				// inertia = mass * width^2 + height ^2
+				this.mInertia = (1 / this.mInvMass) * (this.mWidth * this.mWidth + this.mHeight * this.mHeight) / 12;
+				this.mInertia = 1 / this.mInertia;
+			}
+		};
+		</script>
+	
+		<script>
+			var Circle = function(center, radius, mass, friction, restitution){
+				RigidShape.call(this, center, mass, friction, restitution);
+				this.mType = "Circle";
+				this.mRadius = radius;
+				this.mBoundRadius = radius;
+			//    this.mFix = fix;
+				// The start point of line in circle
+				this.mStartpoint = new Vec2(center.x, center.y - radius); 
+				
+				this.updateInertia();
+			};
+
+			var prototype = Object.create(RigidShape.prototype);
+			prototype.constructor = Circle;
+			Circle.prototype = prototype;
+
+			Circle.prototype.draw = function(context){
+				context.beginPath();
+				// draw a circle
+				context.arc(this.mCenter.x, this.mCenter.y, this.mRadius, 0, Math.PI * 2, true);
+				// draw a line form start point toward center
+				context.moveTo(this.mStartpoint.x, this.mStartpoint.y);
+				context.lineTo(this.mCenter.x, this.mCenter.y);
+				context.closePath();
+				context.stroke();
+			};
+
+			Circle.prototype.move = function(s){
+				this.mStartpoint = this.mStartpoint.add(s);
+				this.mCenter = this.mCenter.add(s);
+				return this;
+			};
+
+			Circle.prototype.rotate = function (angle){
+				this.mAngle += angle;
+				this.mStartpoint = this.mStartpoint.rotate(this.mCenter, angle);
+				return this;
+			};
+
+			Circle.prototype.collisionTest = function (otherShape, collisionInfo) {
+				var status = false;
+				if (otherShape.mType === "Circle") {
+					status = this.collidedCircCirc(this, otherShape, collisionInfo);
+				}
+				else{
+					status = false;
+				}
+				return status;
+			};
+
+			Circle.prototype.collidedCircCirc = function (c1, c2, collisionInfo) {
+				var vFrom1to2 = c2.mCenter.subtract(c1.mCenter);
+				var rSum = c1.mRadius + c2.mRadius;
+				var dist = vFrom1to2.length();
+				if (dist > Math.sqrt(rSum * rSum)) {
+					return false; // not overlapping
+				}
+				if (dist !== 0) {
+					// overlapping but not same position
+					var normalFrom2to1 = vFrom1to2.scale(-1).normalize();
+					var radiusC2 = normalFrom2to1.scale(c2.mRadius);
+					collisionInfo.setInfo(rSum - dist, vFrom1to2.normalize(),
+					c2.mCenter.add(radiusC2));
+				}
+				else {
+					// same position
+					if (c1.mRadius > c2.mRadius) {
+						collisionInfo.setInfo(rSum, new Vec2(0, -1),
+						c1.mCenter.add(new Vec2(0, c1.mRadius)));
+					}else{
+						collisionInfo.setInfo(rSum, new Vec2(0, -1),
+						c2.mCenter.add(new Vec2(0, c2.mRadius)));
+					}
+				}
+				return true;
+			};
+
+			Circle.prototype.updateInertia = function(){
+				if (this.mInvMass === 0) {
+					this.mInertia = 0;
+				}else{
+					// this.mInvMass is inverted!!
+					// Inertia = mass * radius^2
+					// 12 is a constant value that can be changed
+					this.mInertia = (1 / this.mInvMass) * (this.mRadius * this.mRadius) / 12;
+				}
+			};
+		</script>
+	
+		<script>
+			function CollisionInfo() {
+				this.mDepth = 0;
+				this.mNormal = new Vec2(0, 0);
+				this.mStart = new Vec2(0, 0);
+				this.mEnd = new Vec2(0, 0);
+			}
+
+			CollisionInfo.prototype.setNormal = function (s) {
+				this.mNormal = s;
+			};
+
+			CollisionInfo.prototype.getDepth = function () {
+				return this.mDepth;
+			};
+
+			CollisionInfo.prototype.getNormal = function () {
+				return this.mNormal;
+			};
+
+			CollisionInfo.prototype.setInfo = function (d, n, s) {
+				this.mDepth = d;
+				this.mNormal = n;
+				this.mStart = s;
+				this.mEnd = s.add(n.scale(d));
+			};
+		</script>
+	</body>
+</html>
+
+<h2 id="三.书上的源码">三.书上的源码</h2>
+<p><strong>以下是按书上实现的源码, Copy在空的.html文件内,
+便可用浏览器运行上图的简易物理引擎</strong> <strong>源码里加了些注释,
+仍会再出几篇文章, 详细分析源码</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br><span class="line">738</span><br><span class="line">739</span><br><span class="line">740</span><br><span class="line">741</span><br><span class="line">742</span><br><span class="line">743</span><br><span class="line">744</span><br><span class="line">745</span><br><span class="line">746</span><br><span class="line">747</span><br><span class="line">748</span><br><span class="line">749</span><br><span class="line">750</span><br><span class="line">751</span><br><span class="line">752</span><br><span class="line">753</span><br><span class="line">754</span><br><span class="line">755</span><br><span class="line">756</span><br><span class="line">757</span><br><span class="line">758</span><br><span class="line">759</span><br><span class="line">760</span><br><span class="line">761</span><br><span class="line">762</span><br><span class="line">763</span><br><span class="line">764</span><br><span class="line">765</span><br><span class="line">766</span><br><span class="line">767</span><br><span class="line">768</span><br><span class="line">769</span><br><span class="line">770</span><br><span class="line">771</span><br><span class="line">772</span><br><span class="line">773</span><br><span class="line">774</span><br><span class="line">775</span><br><span class="line">776</span><br><span class="line">777</span><br><span class="line">778</span><br><span class="line">779</span><br><span class="line">780</span><br><span class="line">781</span><br><span class="line">782</span><br><span class="line">783</span><br><span class="line">784</span><br><span class="line">785</span><br><span class="line">786</span><br><span class="line">787</span><br><span class="line">788</span><br><span class="line">789</span><br><span class="line">790</span><br><span class="line">791</span><br><span class="line">792</span><br><span class="line">793</span><br><span class="line">794</span><br><span class="line">795</span><br><span class="line">796</span><br><span class="line">797</span><br><span class="line">798</span><br><span class="line">799</span><br><span class="line">800</span><br><span class="line">801</span><br><span class="line">802</span><br><span class="line">803</span><br><span class="line">804</span><br><span class="line">805</span><br><span class="line">806</span><br><span class="line">807</span><br><span class="line">808</span><br><span class="line">809</span><br><span class="line">810</span><br><span class="line">811</span><br><span class="line">812</span><br><span class="line">813</span><br><span class="line">814</span><br><span class="line">815</span><br><span class="line">816</span><br><span class="line">817</span><br><span class="line">818</span><br><span class="line">819</span><br><span class="line">820</span><br><span class="line">821</span><br><span class="line">822</span><br><span class="line">823</span><br><span class="line">824</span><br><span class="line">825</span><br><span class="line">826</span><br><span class="line">827</span><br><span class="line">828</span><br><span class="line">829</span><br><span class="line">830</span><br><span class="line">831</span><br><span class="line">832</span><br><span class="line">833</span><br><span class="line">834</span><br><span class="line">835</span><br><span class="line">836</span><br><span class="line">837</span><br><span class="line">838</span><br><span class="line">839</span><br><span class="line">840</span><br><span class="line">841</span><br><span class="line">842</span><br><span class="line">843</span><br><span class="line">844</span><br><span class="line">845</span><br><span class="line">846</span><br><span class="line">847</span><br><span class="line">848</span><br><span class="line">849</span><br><span class="line">850</span><br><span class="line">851</span><br><span class="line">852</span><br><span class="line">853</span><br><span class="line">854</span><br><span class="line">855</span><br><span class="line">856</span><br><span class="line">857</span><br><span class="line">858</span><br><span class="line">859</span><br><span class="line">860</span><br><span class="line">861</span><br><span class="line">862</span><br><span class="line">863</span><br><span class="line">864</span><br><span class="line">865</span><br><span class="line">866</span><br><span class="line">867</span><br><span class="line">868</span><br><span class="line">869</span><br><span class="line">870</span><br><span class="line">871</span><br><span class="line">872</span><br><span class="line">873</span><br><span class="line">874</span><br><span class="line">875</span><br><span class="line">876</span><br><span class="line">877</span><br><span class="line">878</span><br><span class="line">879</span><br><span class="line">880</span><br><span class="line">881</span><br><span class="line">882</span><br><span class="line">883</span><br><span class="line">884</span><br><span class="line">885</span><br><span class="line">886</span><br><span class="line">887</span><br><span class="line">888</span><br><span class="line">889</span><br><span class="line">890</span><br><span class="line">891</span><br><span class="line">892</span><br><span class="line">893</span><br><span class="line">894</span><br><span class="line">895</span><br><span class="line">896</span><br><span class="line">897</span><br><span class="line">898</span><br><span class="line">899</span><br><span class="line">900</span><br><span class="line">901</span><br><span class="line">902</span><br><span class="line">903</span><br><span class="line">904</span><br><span class="line">905</span><br><span class="line">906</span><br><span class="line">907</span><br><span class="line">908</span><br><span class="line">909</span><br><span class="line">910</span><br><span class="line">911</span><br><span class="line">912</span><br><span class="line">913</span><br><span class="line">914</span><br><span class="line">915</span><br><span class="line">916</span><br><span class="line">917</span><br><span class="line">918</span><br><span class="line">919</span><br><span class="line">920</span><br><span class="line">921</span><br><span class="line">922</span><br><span class="line">923</span><br><span class="line">924</span><br><span class="line">925</span><br><span class="line">926</span><br><span class="line">927</span><br><span class="line">928</span><br><span class="line">929</span><br><span class="line">930</span><br><span class="line">931</span><br><span class="line">932</span><br><span class="line">933</span><br><span class="line">934</span><br><span class="line">935</span><br><span class="line">936</span><br><span class="line">937</span><br><span class="line">938</span><br><span class="line">939</span><br><span class="line">940</span><br><span class="line">941</span><br><span class="line">942</span><br><span class="line">943</span><br><span class="line">944</span><br><span class="line">945</span><br><span class="line">946</span><br><span class="line">947</span><br><span class="line">948</span><br><span class="line">949</span><br><span class="line">950</span><br><span class="line">951</span><br><span class="line">952</span><br><span class="line">953</span><br><span class="line">954</span><br><span class="line">955</span><br><span class="line">956</span><br><span class="line">957</span><br><span class="line">958</span><br><span class="line">959</span><br><span class="line">960</span><br><span class="line">961</span><br><span class="line">962</span><br><span class="line">963</span><br><span class="line">964</span><br><span class="line">965</span><br><span class="line">966</span><br><span class="line">967</span><br><span class="line">968</span><br><span class="line">969</span><br><span class="line">970</span><br><span class="line">971</span><br><span class="line">972</span><br><span class="line">973</span><br><span class="line">974</span><br><span class="line">975</span><br><span class="line">976</span><br><span class="line">977</span><br><span class="line">978</span><br><span class="line">979</span><br><span class="line">980</span><br><span class="line">981</span><br><span class="line">982</span><br><span class="line">983</span><br><span class="line">984</span><br><span class="line">985</span><br><span class="line">986</span><br><span class="line">987</span><br><span class="line">988</span><br><span class="line">989</span><br><span class="line">990</span><br><span class="line">991</span><br><span class="line">992</span><br><span class="line">993</span><br><span class="line">994</span><br><span class="line">995</span><br><span class="line">996</span><br><span class="line">997</span><br><span class="line">998</span><br><span class="line">999</span><br><span class="line">1000</span><br><span class="line">1001</span><br><span class="line">1002</span><br><span class="line">1003</span><br><span class="line">1004</span><br><span class="line">1005</span><br><span class="line">1006</span><br><span class="line">1007</span><br><span class="line">1008</span><br><span class="line">1009</span><br><span class="line">1010</span><br><span class="line">1011</span><br><span class="line">1012</span><br><span class="line">1013</span><br><span class="line">1014</span><br><span class="line">1015</span><br><span class="line">1016</span><br><span class="line">1017</span><br><span class="line">1018</span><br><span class="line">1019</span><br><span class="line">1020</span><br><span class="line">1021</span><br><span class="line">1022</span><br><span class="line">1023</span><br><span class="line">1024</span><br><span class="line">1025</span><br><span class="line">1026</span><br><span class="line">1027</span><br><span class="line">1028</span><br><span class="line">1029</span><br><span class="line">1030</span><br><span class="line">1031</span><br><span class="line">1032</span><br><span class="line">1033</span><br><span class="line">1034</span><br><span class="line">1035</span><br><span class="line">1036</span><br><span class="line">1037</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;读书笔记《Building a 2D Game Physics Engine》&lt;/title&gt;</span><br><span class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body onkeydown=&quot;return userControl(event);&quot;</span><br><span class="line">		  onload=&quot;var game = new MyGame();</span><br><span class="line">		  gEngine.Core.initializeEngineCore()&quot;&gt;</span><br><span class="line">		&lt;table style=&quot;padding:2px&quot;&gt;</span><br><span class="line">			&lt;tr&gt;</span><br><span class="line">				&lt;td&gt;</span><br><span class="line">					&lt;div&gt;</span><br><span class="line">						&lt;canvas id = &quot;canvas&quot;&gt;</span><br><span class="line">							</span><br><span class="line">						&lt;/canvas&gt;</span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">				&lt;/td&gt;</span><br><span class="line">				&lt;td&gt;</span><br><span class="line">					</span><br><span class="line">				&lt;/td&gt;</span><br><span class="line">			&lt;/tr&gt;</span><br><span class="line">			&lt;tr&gt;</span><br><span class="line">				&lt;td&gt;</span><br><span class="line">					&lt;div id=&quot;uiEchoString&quot;&gt; &lt;/div&gt;</span><br><span class="line">				&lt;/td&gt;</span><br><span class="line">			&lt;/tr&gt;</span><br><span class="line">		&lt;/table&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;Lib/Vec2.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;MyGame.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;EngineCore/Core.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;EngineCore/UserControl.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;RigidBody/RigidShape.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;RigidBody/Rectangle.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;RigidBody/Circle.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		&lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;CollisionInfo.js&quot;&gt;&lt;/script&gt; --&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt; </span><br><span class="line">			var Vec2 = function(x,y)&#123;</span><br><span class="line">				this.x = x;</span><br><span class="line">				this.y = y;</span><br><span class="line">			&#125;;</span><br><span class="line">			</span><br><span class="line">			// 向量长度 = sqrt(x^2 + y^2)</span><br><span class="line">			Vec2.prototype.length = function()&#123;</span><br><span class="line">				return Math.sqrt(this.x * this.x + this.y * this.y);  </span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量相加 a + b</span><br><span class="line">			Vec2.prototype.add = function(vec)&#123;</span><br><span class="line">			  return new Vec2(vec.x + this.x, vec.y + this.y);  </span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量相减 点a减点b = 点b指向点a的向量</span><br><span class="line">			// a-b ===== b-&gt;a</span><br><span class="line">			Vec2.prototype.subtract = function(vec)&#123;</span><br><span class="line">			  return new Vec2(this.x - vec.x, this.y - vec.y);  </span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量乘以标量</span><br><span class="line">			Vec2.prototype.scale = function(n)&#123;</span><br><span class="line">			  return new Vec2(this.x * n, this.y * n);  </span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量点乘</span><br><span class="line">			// 1.向量点乘结果为标量.</span><br><span class="line">			// 		&lt;1&gt;结果 &gt; 0, 则两向量有分量同向</span><br><span class="line">			//		&lt;2&gt;结果 &lt; 0, 则两向量反向</span><br><span class="line">			//		&lt;3&gt;结果 = 0, 则两向量垂直</span><br><span class="line">			// 2.向量点乘结果意义为:在该向量的投影.</span><br><span class="line">			//		即: a·b = b在a方向上的投影</span><br><span class="line">			Vec2.prototype.dot = function(vec)&#123;</span><br><span class="line">				return (this.x * vec.x + this.y * vec.y);</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量叉乘</span><br><span class="line">			// 1.向量叉乘结果仍为向量, 该结果垂直原来相乘的两向量</span><br><span class="line">			// 2.向量叉乘的结果方向, 标志两向量的旋转方向</span><br><span class="line">			Vec2.prototype.cross = function(vec)&#123;</span><br><span class="line">			  return (this.x * vec.y - this.y * vec.x);  </span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 二维向量旋转, 绕某个点, 旋转angle角度</span><br><span class="line">			Vec2.prototype.rotate = function(center, angle)&#123;</span><br><span class="line">			  // rotate in counterclockwise =&gt;逆时针</span><br><span class="line">			  var r = [];</span><br><span class="line">			  var x = this.x - center.x;</span><br><span class="line">			  var y = this.y - center.y;</span><br><span class="line">			  r[0] = x * Math.cos(angle) - y * Math.sin(angle);</span><br><span class="line">			  r[1] = x * Math.sin(angle) + y * Math.cos(angle);</span><br><span class="line">			  r[0] += center.x;</span><br><span class="line">			  r[1] += center.y;</span><br><span class="line">			  return new Vec2(r[0], r[1]);</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 向量归一化, 即归一化后的向量长度length=1</span><br><span class="line">			Vec2.prototype.normalize = function()&#123;</span><br><span class="line">				var len = this.length();</span><br><span class="line">				if(len&gt;0)&#123;</span><br><span class="line">					len = 1/len;</span><br><span class="line">				&#125;</span><br><span class="line">				return new Vec2(this.x * len, this.y * len);</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			// 返回两个点直接的距离</span><br><span class="line">			Vec2.prototype.distance = function(vec)&#123;</span><br><span class="line">			  var x = this.x - vec.x;</span><br><span class="line">			  var y = this.y - vec.y;</span><br><span class="line">			  return Math.sqrt(x * x + y * y);</span><br><span class="line">			&#125;;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			function MyGame()&#123;</span><br><span class="line">				var width = gEngine.Core.mWidth;</span><br><span class="line">				var height = gEngine.Core.mHeight;</span><br><span class="line">				</span><br><span class="line">				// 定义两个矩形物体</span><br><span class="line">				var r1 = new Rectangle(</span><br><span class="line">					new Vec2(width / 2, height / 2), </span><br><span class="line">					30, 60, 10, 1, 0);</span><br><span class="line">				r1.mAcceleration = new Vec2(10, 0);</span><br><span class="line">				var r2 = new Rectangle(</span><br><span class="line">					new Vec2(width / 2, height / 2), </span><br><span class="line">					40, 20, 100, 1, 0);</span><br><span class="line">				r2.mAcceleration = new Vec2(-5, 0);</span><br><span class="line">				</span><br><span class="line">				// 定义4条边界, mass为0, 则4条边不受物理碰撞影响, 即4条边与其他物体碰撞, 边不会动, 其他物体反弹.</span><br><span class="line">				var up = new Rectangle(new Vec2(width / 2, 0), width, 3, 0, 1, 1);</span><br><span class="line">				var down = new Rectangle(new Vec2(width / 2, height), width, 3, 0, 1, 1);</span><br><span class="line">				var left = new Rectangle(new Vec2(0, height / 2), 3, height, 0, 1, 1);</span><br><span class="line">				var right = new Rectangle(new Vec2(width, height / 2), 3, height, 0, 1, 1);</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var gEngine = gEngine || &#123;&#125;;</span><br><span class="line">			gEngine.Core = (function () &#123;</span><br><span class="line">				// html的语法, 我也是照抄的, 大致意思就是定义画布Canvas的长宽高</span><br><span class="line">				var mCanvas, mContext, mWidth = 650, mHeight = 650;</span><br><span class="line">				mCanvas = document.getElementById(&#x27;canvas&#x27;);</span><br><span class="line">				mContext = mCanvas.getContext(&#x27;2d&#x27;);</span><br><span class="line">				mCanvas.height = mHeight;</span><br><span class="line">				mCanvas.width = mWidth;</span><br><span class="line"></span><br><span class="line">				// 存储所有定义的物体, 目前物体有两种 矩形, 圆形</span><br><span class="line">				var mAllObjects = [];</span><br><span class="line">				// 定义重力</span><br><span class="line">				var mGravity = new Vec2(0,10);</span><br><span class="line">				// 是否启用运动</span><br><span class="line">				var mMovement = false;</span><br><span class="line"></span><br><span class="line">				var mCurrentTime, mElapsedTime, mPreviousTime = Date.now(), mLagTime = 0;</span><br><span class="line">				// 简易2d物理引擎1s多少帧</span><br><span class="line">				var kFPS = 60; // Frames per second</span><br><span class="line">				// 1帧多少s = 1/60;</span><br><span class="line">				var kFrameTime = 1 / kFPS;</span><br><span class="line">				// 每帧模拟时用的delta差量</span><br><span class="line">				var mUpdateIntervalInSeconds = kFrameTime;</span><br><span class="line">				// 1帧多少ms</span><br><span class="line">				var kMPF = 1000 * kFrameTime; // Milliseconds per frame.</span><br><span class="line"></span><br><span class="line">				// 类似Unity的Update</span><br><span class="line">				var runGameLoop = function () &#123;</span><br><span class="line">					requestAnimationFrame(function () &#123;</span><br><span class="line">						runGameLoop();</span><br><span class="line">					&#125;);</span><br><span class="line">					</span><br><span class="line">					// compute how much time has elapsed since the last RunLoop</span><br><span class="line">					mCurrentTime = Date.now();</span><br><span class="line">					mElapsedTime = mCurrentTime - mPreviousTime;</span><br><span class="line">					mPreviousTime = mCurrentTime;</span><br><span class="line">					mLagTime += mElapsedTime;</span><br><span class="line">					// Update the game the appropriate number of times.</span><br><span class="line">					// Update only every Milliseconds per frame.</span><br><span class="line">					// If lag larger then update frames, update until caught up.</span><br><span class="line">					mContext.clearRect(0, 0, mWidth, mHeight);</span><br><span class="line">					</span><br><span class="line">					// 标准写法, 就是让物理引擎的循环严格满足我们定义的帧率</span><br><span class="line">					// 理解该代码, 可以试着手算带几个变量, 推算几个循环</span><br><span class="line">					while(mLagTime &gt;= kMPF)&#123;</span><br><span class="line">						mLagTime -= kMPF;</span><br><span class="line">						gEngine.Physics.collision();</span><br><span class="line">						update();</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">					// html语法, 照抄, 大体意思就是写该</span><br><span class="line">					updateUIEcho();</span><br><span class="line">					</span><br><span class="line">					// 将简易2d物理引擎计算的数据画在画布上</span><br><span class="line">					// 这里是html的渲染帧率, 与上面定义的物理引擎的帧率是两个值</span><br><span class="line">					draw();</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				// 更新物体的速度, 角速度, 并以此更新物体位置, 物体角度</span><br><span class="line">				var update = function () &#123;</span><br><span class="line">					var i;</span><br><span class="line">					for (i = 0; i &lt; mAllObjects.length; i++) &#123;</span><br><span class="line">						mAllObjects[i].update(mContext);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;;</span><br><span class="line"></span><br><span class="line">				var updateUIEcho = function () &#123;</span><br><span class="line">				 document.getElementById(&quot;uiEchoString&quot;).innerHTML = </span><br><span class="line">				 &quot;&lt;p&gt;&lt;b&gt;Selected Object:&lt;/b&gt;:&lt;/p&gt;&quot; +</span><br><span class="line">				 &quot;&lt;ul style=\&quot;margin:-10px\&quot;&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Id: &quot; + gObjectNum + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Center: &quot; + mAllObjects[gObjectNum].mCenter.x.toPrecision(3) + </span><br><span class="line">				 &quot;,&quot; + mAllObjects[gObjectNum].mCenter.y.toPrecision(3) + &quot;&lt;/li&gt;&quot; + </span><br><span class="line">				 &quot;&lt;li&gt;Angle: &quot; + mAllObjects[gObjectNum].mAngle.toPrecision(3) + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Velocity: &quot; + mAllObjects[gObjectNum].mVelocity.x.toPrecision(3) + </span><br><span class="line">				 &quot;,&quot; + mAllObjects[gObjectNum].mVelocity.y.toPrecision(3) + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;AngluarVelocity: &quot; + mAllObjects[gObjectNum].mAngularVelocity.</span><br><span class="line">				toPrecision(3) + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Mass: &quot; + 1 / mAllObjects[gObjectNum].mInvMass.toPrecision(3) + </span><br><span class="line">				&quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Friction: &quot; + mAllObjects[gObjectNum].mFriction.toPrecision(3) + </span><br><span class="line">				&quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Restitution: &quot; + mAllObjects[gObjectNum].mRestitution.</span><br><span class="line">				toPrecision(3) + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;Movement: &quot; + gEngine.Core.mMovement + &quot;&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;/ul&gt; &lt;hr&gt;&quot; +</span><br><span class="line">				 &quot;&lt;p&gt;&lt;b&gt;Control&lt;/b&gt;: of selected object&lt;/p&gt;&quot; +</span><br><span class="line">				 &quot;&lt;ul style=\&quot;margin:-10px\&quot;&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;Num&lt;/b&gt; or &lt;b&gt;Up/Down Arrow&lt;/b&gt;: Select Object&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;WASD&lt;/b&gt; + &lt;b&gt;QE&lt;/b&gt;: Position [Move + Rotate]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;IJKL&lt;/b&gt; + &lt;b&gt;UO&lt;/b&gt;: Velocities [Linear + Angular]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;Z/X&lt;/b&gt;: Mass [Decrease/Increase]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;C/V&lt;/b&gt;: Frictrion [Decrease/Increase]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;B/N&lt;/b&gt;: Restitution [Decrease/Increase]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;li&gt;&lt;b&gt;,&lt;/b&gt;: Movement [On/Off]&lt;/li&gt;&quot; +</span><br><span class="line">				 &quot;&lt;/ul&gt; &lt;hr&gt;&quot; +</span><br><span class="line">				 &quot;&lt;b&gt;F/G&lt;/b&gt;: Spawn [Rectangle/Circle] at selected object&quot; +</span><br><span class="line">				 &quot;&lt;p&gt;&lt;b&gt;H&lt;/b&gt;: Excite all objects&lt;/p&gt;&quot; +</span><br><span class="line">				 &quot;&lt;p&gt;&lt;b&gt;R&lt;/b&gt;: Reset System&lt;/p&gt;&quot; +</span><br><span class="line">				 &quot;&lt;hr&gt;&quot;; </span><br><span class="line">				&#125;;</span><br><span class="line"></span><br><span class="line">				var draw = function () &#123;</span><br><span class="line">					var i;</span><br><span class="line">					for (i = 0; i &lt; mAllObjects.length; i++) &#123;</span><br><span class="line">						mContext.strokeStyle = &#x27;blue&#x27;;</span><br><span class="line">						if (i === gObjectNum) &#123;</span><br><span class="line">							mContext.strokeStyle = &#x27;red&#x27;;</span><br><span class="line">						&#125;</span><br><span class="line">						mAllObjects[i].draw(mContext);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;;</span><br><span class="line"></span><br><span class="line">				var initializeEngineCore = function () &#123;</span><br><span class="line">					runGameLoop();</span><br><span class="line">				&#125;;</span><br><span class="line"></span><br><span class="line">				var mPublic = &#123;</span><br><span class="line">					initializeEngineCore: initializeEngineCore,</span><br><span class="line">					mAllObjects: mAllObjects,</span><br><span class="line">					mWidth: mWidth,</span><br><span class="line">					mHeight: mHeight,</span><br><span class="line">					mContext: mContext,</span><br><span class="line">					mGravity: mGravity,</span><br><span class="line">					mUpdateIntervalInSeconds: mUpdateIntervalInSeconds,</span><br><span class="line">					mMovement: mMovement</span><br><span class="line">				&#125;;</span><br><span class="line">				return mPublic;</span><br><span class="line">			&#125;());</span><br><span class="line"></span><br><span class="line">			gEngine.Physics = (function () &#123;</span><br><span class="line">				// 两个碰撞的物体, 是否进行位置矫正, false的时候, 可以明显看见两个物体碰撞时有一部分叠在一起</span><br><span class="line">				var mPositionalCorrectionFlag = true;</span><br><span class="line">				// 连续碰撞检测, 可使碰撞更加细腻</span><br><span class="line">				var mRelaxationCount = 15;</span><br><span class="line">				// percentage of separation to project objects</span><br><span class="line">				var mPosCorrectionRate = 0.8;</span><br><span class="line">				</span><br><span class="line">				var drawCollisionInfo = function (collisionInfo, context) &#123;</span><br><span class="line">					context.beginPath();</span><br><span class="line">					context.moveTo(collisionInfo.mStart.x, collisionInfo.mStart.y);</span><br><span class="line">					context.lineTo(collisionInfo.mEnd.x, collisionInfo.mEnd.y);</span><br><span class="line">					context.closePath();</span><br><span class="line">					context.strokeStyle = &quot;red&quot;;</span><br><span class="line">					context.stroke();</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				// 2d物理引擎的核心之一: 检测碰撞</span><br><span class="line">				var collision = function () &#123;</span><br><span class="line">					var i, j, k;</span><br><span class="line">					var collisionInfo = new CollisionInfo();</span><br><span class="line"></span><br><span class="line">					// 这里任意两个物体正反检测了两次, 认为没有必要. </span><br><span class="line">					// 但是根据书上的算法解释, 分离轴检测两个矩形时, 正反检测会结果不一致, 暂时没有搞懂, 之后搞懂后单独出一篇文章优化下.</span><br><span class="line">					for (k = 0; k &lt; mRelaxationCount; k++) &#123;</span><br><span class="line">						for (i = 0; i &lt; gEngine.Core.mAllObjects.length; i++) &#123;</span><br><span class="line">							for (j = 0; j &lt; gEngine.Core.mAllObjects.length; j++) &#123;</span><br><span class="line">								if (i === j) &#123;</span><br><span class="line">									continue;</span><br><span class="line">								&#125;</span><br><span class="line">								</span><br><span class="line">								// 粗糙的边界检测, 性能优异.</span><br><span class="line">								if (gEngine.Core.mAllObjects[i].boundTest(gEngine.Core.mAllObjects[j])) &#123;</span><br><span class="line">									// 细腻的碰撞检测, 带碰撞信息.</span><br><span class="line">									if (gEngine.Core.mAllObjects[i].collisionTest(gEngine.Core.mAllObjects[j], collisionInfo)) &#123;</span><br><span class="line">										if (collisionInfo.getNormal().dot(</span><br><span class="line">											gEngine.Core.mAllObjects[j].mCenter.subtract(</span><br><span class="line">											gEngine.Core.mAllObjects[i].mCenter)) &lt; 0) &#123;</span><br><span class="line">										&#125;</span><br><span class="line">										</span><br><span class="line">										drawCollisionInfo(collisionInfo, gEngine.Core.mContext);</span><br><span class="line">										resolveCollision(gEngine.Core.mAllObjects[i], gEngine.Core.mAllObjects[j], collisionInfo);</span><br><span class="line">									&#125;</span><br><span class="line"></span><br><span class="line">									gEngine.Core.mContext.strokeStyle = &#x27;green&#x27;;</span><br><span class="line">									gEngine.Core.mAllObjects[i].draw(gEngine.Core.mContext);</span><br><span class="line">									gEngine.Core.mAllObjects[j].draw(gEngine.Core.mContext);</span><br><span class="line">								&#125;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				// 位置矫正</span><br><span class="line">				// 矫正的位移量与 两物体的倒数有什么关系? (之后再翻书回忆下, 记起来了, 再开篇文章记录下)</span><br><span class="line">				var positionalCorrection = function (s1, s2, collisionInfo)&#123;</span><br><span class="line">					var s1InvMass = s1.mInvMass;</span><br><span class="line">					var s2InvMass = s2.mInvMass;</span><br><span class="line">					</span><br><span class="line">					var num = collisionInfo.getDepth() / (s1InvMass + s2InvMass) * mPosCorrectionRate;</span><br><span class="line">					var correctionAmount = collisionInfo.getNormal().scale(num);</span><br><span class="line">					</span><br><span class="line">					s1.move(correctionAmount.scale(-s1InvMass));</span><br><span class="line">					s2.move(correctionAmount.scale(s2InvMass));</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				// 2d物理引擎的核心之一: 解决碰撞</span><br><span class="line">				// 解决碰撞的方法就 positionalCorrection 方法一个, 位置矫正</span><br><span class="line">				// 剩下的代码就是计算碰撞后的物体的 线性速度, 和角速度</span><br><span class="line">				// (这里设计高中的物理知识, 例如牛顿三定律之类的, 还有大学的线性代数, 目前都忘了, 等回忆起来了, 单独开篇blog记录下)</span><br><span class="line">				var  resolveCollision = function (s1, s2, collisionInfo)&#123;</span><br><span class="line">					if ((s1.mInvMass === 0) &amp;&amp; (s2.mInvMass === 0)) &#123;</span><br><span class="line">						return;</span><br><span class="line">					&#125;</span><br><span class="line">					// correct positions</span><br><span class="line">					if (gEngine.Physics.mPositionalCorrectionFlag) &#123;</span><br><span class="line">						positionalCorrection(s1, s2, collisionInfo);</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">					var n = collisionInfo.getNormal();</span><br><span class="line">					</span><br><span class="line">					var start = collisionInfo.mStart.scale(s2.mInvMass / (s1.mInvMass + s2.mInvMass));</span><br><span class="line">					var end = collisionInfo.mEnd.scale(s1.mInvMass / (s1.mInvMass + s2.mInvMass));</span><br><span class="line">					var p = start.add(end);</span><br><span class="line">					// r is vector form center of shape to collision point</span><br><span class="line">					var r1 = p.subtract(s1.mCenter);</span><br><span class="line">					var r2 = p.subtract(s2.mCenter);</span><br><span class="line">					</span><br><span class="line">					// newV = V + mAngularVelocity cross R</span><br><span class="line">					var v1 = s1.mVelocity.add(new Vec2(-1 * s1.mAngularVelocity * r1.y, s1.mAngularVelocity * r1.x));</span><br><span class="line">					var v2 = s2.mVelocity.add(new Vec2(-1 * s2.mAngularVelocity * r2.y, s2.mAngularVelocity * r2.x));</span><br><span class="line">					var relativeVelocity = v2.subtract(v1);</span><br><span class="line">					</span><br><span class="line">					// Relative velocity in normal direction</span><br><span class="line">					var rVelocityInNormal = relativeVelocity.dot(n);</span><br><span class="line">					</span><br><span class="line">					// if objects moving apart ignore</span><br><span class="line">					if (rVelocityInNormal &gt; 0) &#123;</span><br><span class="line">						return;</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">					// R cross N</span><br><span class="line">					var R1crossN = r1.cross(n);</span><br><span class="line">					var R2crossN = r2.cross(n);</span><br><span class="line">					</span><br><span class="line">					// compute and apply response impulses for each object</span><br><span class="line">					var newRestitution = Math.min(s1.mRestitution, s2.mRestitution);</span><br><span class="line">					var newFriction = Math.min(s1.mFriction, s2.mFriction);</span><br><span class="line">					</span><br><span class="line">					// Calc impulse scalar</span><br><span class="line">					// Reference: http://www.myphysicslab.com/collision.html</span><br><span class="line">					var jN = -(1 + newRestitution) * rVelocityInNormal;</span><br><span class="line">					jN = jN / (s1.mInvMass + s2.mInvMass + </span><br><span class="line">							R1crossN * R1crossN * s1.mInertia + </span><br><span class="line">							R2crossN * R2crossN * s2.mInertia);</span><br><span class="line">										</span><br><span class="line">					</span><br><span class="line">					</span><br><span class="line">					// impulse is in direction of normal ( from s1 to s2)</span><br><span class="line">					var impulse = n.scale(jN);</span><br><span class="line">					// impulse = F dt = m * deltaV</span><br><span class="line">					// deltaV = impulse / m</span><br><span class="line">					s1.mVelocity = s1.mVelocity.subtract(impulse.scale(s1.mInvMass));</span><br><span class="line">					s2.mVelocity = s2.mVelocity.add(impulse.scale(s2.mInvMass));</span><br><span class="line">					</span><br><span class="line">					s1.mAngularVelocity -= R1crossN * jN * s1.mInertia;</span><br><span class="line">					s2.mAngularVelocity += R2crossN * jN * s2.mInertia;</span><br><span class="line">					</span><br><span class="line">					// impulse is in direction of tangent</span><br><span class="line">					var tangent = relativeVelocity.subtract(n.scale(relativeVelocity.dot(n)));</span><br><span class="line">					// relativeVelocity.dot(tangent) should less than 0</span><br><span class="line">					tangent = tangent.normalize().scale(-1);</span><br><span class="line">					</span><br><span class="line">					var R1crossT = r1.cross(tangent);</span><br><span class="line">					var R2crossT = r2.cross(tangent);</span><br><span class="line">					</span><br><span class="line">					var jT = -(1 + newRestitution) * relativeVelocity.dot(tangent) * newFriction;</span><br><span class="line">					jT = jT / (s1.mInvMass + s2.mInvMass +</span><br><span class="line">							R1crossT * R1crossT * s1.mInertia +</span><br><span class="line">							R2crossT * R2crossT * s2.mInertia);</span><br><span class="line">					</span><br><span class="line">					// friction should be less than force in normal direction</span><br><span class="line">					if (jT &gt; jN) jT = jN;</span><br><span class="line">					// impulse is form s1 to s2 (in opposite direction of velocity</span><br><span class="line">					impulse = tangent.scale(jT);</span><br><span class="line">					</span><br><span class="line">					s1.mVelocity = s1.mVelocity.subtract(impulse.scale(s1.mInvMass));</span><br><span class="line">					s2.mVelocity = s2.mVelocity.add(impulse.scale(s2.mInvMass));</span><br><span class="line">					</span><br><span class="line">					</span><br><span class="line">					s1.mAngularVelocity -= R1crossT * jT * s1.mInertia;</span><br><span class="line">					s2.mAngularVelocity -= R2crossT * jT * s2.mInertia;</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				var mPublic = &#123;</span><br><span class="line">					collision: collision,</span><br><span class="line">					mPositionalCorrectionFlag: mPositionalCorrectionFlag</span><br><span class="line">				&#125;;</span><br><span class="line">				return mPublic;</span><br><span class="line">			&#125;());</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var gObjectNum = 0;</span><br><span class="line">			// 以下就是 按下不同的keycode码(ASCII码), 修改对应索引物体的mAllObjects[gObjectNum]的各种数据</span><br><span class="line">			function userControl(event)&#123;</span><br><span class="line">				var keycode;</span><br><span class="line">				var width = gEngine.Core.mWidth;</span><br><span class="line">				var height = gEngine.Core.mHeight;</span><br><span class="line">				var context = gEngine.Core.mContext;</span><br><span class="line">				</span><br><span class="line">				if(window.event)&#123; // IE</span><br><span class="line">					keycode = event.keyCode;</span><br><span class="line">				&#125;</span><br><span class="line">				else if(event.which)&#123; // Netscape/Firefox/Opera</span><br><span class="line">					keycode = event.which;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if(keycode === 70)&#123; //f</span><br><span class="line">					var r1 = new Rectangle(</span><br><span class="line">						new Vec2(gEngine.Core.mAllObjects[gObjectNum].mCenter.x,</span><br><span class="line">							gEngine.Core.mAllObjects[gObjectNum].mCenter.y),</span><br><span class="line">						Math.random() * 30 + 10, </span><br><span class="line">						Math.random() * 30 + 10,</span><br><span class="line">						Math.random() * 30, </span><br><span class="line">						Math.random(), </span><br><span class="line">						Math.random());</span><br><span class="line">				&#125;</span><br><span class="line">				if(keycode === 71)&#123; //g</span><br><span class="line">					var r1 = new Circle(</span><br><span class="line">						new Vec2(gEngine.Core.mAllObjects[gObjectNum].mCenter.x,</span><br><span class="line">							gEngine.Core.mAllObjects[gObjectNum].mCenter.y),</span><br><span class="line">						Math.random() * 10 + 20,  </span><br><span class="line">						Math.random() * 30,</span><br><span class="line">						Math.random(), </span><br><span class="line">						Math.random());</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode === 72) &#123; //H</span><br><span class="line">					var i;</span><br><span class="line">					for (i = 0; i &lt; gEngine.Core.mAllObjects.length; i++) &#123;</span><br><span class="line">						if (gEngine.Core.mAllObjects[i].mInvMass !== 0) &#123;</span><br><span class="line">							gEngine.Core.mAllObjects[i].mVelocity = </span><br><span class="line">									new Vec2(Math.random() * 20 - 10, Math.random() * 20 - 10);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode &gt;= 48 &amp;&amp; keycode &lt;= 57)&#123;</span><br><span class="line">					if (keycode - 48 &lt; gEngine.Core.mAllObjects.length) &#123;</span><br><span class="line">						gObjectNum = keycode - 48;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 38) &#123;</span><br><span class="line">					if (gObjectNum &gt; 0) &#123;</span><br><span class="line">						gObjectNum--;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 40) &#123;</span><br><span class="line">					if (gObjectNum &lt; gEngine.Core.mAllObjects.length-1)&#123;</span><br><span class="line">						gObjectNum++;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				// move with WASD keys</span><br><span class="line">				if (keycode === 87) &#123; //W</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(0, -10));</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 83) &#123; // S</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(0, +10));</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 65) &#123; //A</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(-10, 0));</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 68) &#123; //D</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].move(new Vec2(10, 0));</span><br><span class="line">				&#125;</span><br><span class="line">				// Rotate with QE keys</span><br><span class="line">				if (keycode === 81) &#123; //Q</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].rotate(-0.1);</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 69) &#123; //E</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].rotate(0.1);</span><br><span class="line">				&#125;</span><br><span class="line">				// Toggle gravity with the H key</span><br><span class="line">				if (keycode === 72) &#123; //H</span><br><span class="line">					console.log(gEngine.Core.mAllObjects[gObjectNum].mFix);</span><br><span class="line">					if(gEngine.Core.mAllObjects[gObjectNum].mFix === 0)</span><br><span class="line">						gEngine.Core.mAllObjects[gObjectNum].mFix = 1;</span><br><span class="line">					else gEngine.Core.mAllObjects[gObjectNum].mFix = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 82) &#123; //R</span><br><span class="line">					gEngine.Core.mAllObjects.splice(5, gEngine.Core.mAllObjects.length);</span><br><span class="line">					gObjectNum = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				</span><br><span class="line">				if (keycode === 73) &#123; //I</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mVelocity.y -= 1;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 75) &#123; //K</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mVelocity.y += 1;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 74) &#123; //J</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mVelocity.x -= 1;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 76) &#123; //L</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mVelocity.x += 1;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				</span><br><span class="line">				if (keycode === 85) &#123; //U</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mAngularVelocity -= 0.1;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 79) &#123; //O</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mAngularVelocity += 0.1;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode === 90) &#123; //Z</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].updateMass(-1);</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 88) &#123; //X</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].updateMass(1);</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode === 67) &#123; //C</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mFriction -= 0.01;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 86) &#123; //V</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mFriction += 0.01;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode === 66) &#123; //B</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mRestitution -= 0.01;</span><br><span class="line">				&#125;</span><br><span class="line">				if (keycode === 78) &#123; //N</span><br><span class="line">					gEngine.Core.mAllObjects[gObjectNum].mRestitution += 0.01;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (keycode === 188) &#123; //&#x27;188</span><br><span class="line">					gEngine.Core.mMovement = !gEngine.Core.mMovement;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			function RigidShape(center, mass, friction, restitution)&#123;</span><br><span class="line">				this.mCenter = center;</span><br><span class="line">				this.mInertia = 0;</span><br><span class="line">				if (mass !== undefined) &#123;</span><br><span class="line">					this.mInvMass = mass;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					this.mInvMass = 1;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (friction !== undefined) &#123;</span><br><span class="line">					this.mFriction = friction;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					this.mFriction = 0.8;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				if (restitution !== undefined) &#123;</span><br><span class="line">					this.mRestitution = restitution;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					this.mRestitution = 0.2;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				this.mVelocity = new Vec2(0, 0);</span><br><span class="line">				</span><br><span class="line">				if (this.mInvMass !== 0) &#123;</span><br><span class="line">					this.mInvMass = 1/ this.mInvMass;</span><br><span class="line">					this.mAcceleration = gEngine.Core.mGravity;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					this.mAcceleration = new Vec2(0, 0);</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				// angle</span><br><span class="line">				this.mAngle = 0;</span><br><span class="line">				// negetive-- clockwise</span><br><span class="line">				// positive-- counterclockwise</span><br><span class="line">				this.mAngularVelocity = 0;</span><br><span class="line">				this.mAngularAcceleration = 0;</span><br><span class="line">				</span><br><span class="line">				this.mBoundRadius = 0;</span><br><span class="line">				gEngine.Core.mAllObjects.push(this);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			RigidShape.prototype.update = function () &#123; </span><br><span class="line">				if (gEngine.Core.mMovement) &#123;</span><br><span class="line">					var dt = gEngine.Core.mUpdateIntervalInSeconds;</span><br><span class="line">					// v += a*t</span><br><span class="line">					this.mVelocity = this.mVelocity.add(this.mAcceleration.scale(dt));</span><br><span class="line">					// s += v*t</span><br><span class="line">					this.move(this.mVelocity.scale(dt));</span><br><span class="line">					</span><br><span class="line">					this.mAngularVelocity += this.mAngularAcceleration * dt;</span><br><span class="line">					this.rotate(this.mAngularVelocity * dt);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			RigidShape.prototype.updateMass = function (delta)&#123;</span><br><span class="line">				var mass;</span><br><span class="line">				if (this.mInvMass !== 0) &#123;</span><br><span class="line">					mass = 1 / this.mInvMass;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					mass = 0;</span><br><span class="line">				&#125;</span><br><span class="line">				mass += delta;</span><br><span class="line">				if (mass &lt;= 0) &#123;</span><br><span class="line">					this.mInvMass = 0;</span><br><span class="line">					this.mVelocity = new Vec2(0, 0);</span><br><span class="line">					this.mAccelartion = new Vec2(0, 0);</span><br><span class="line">					this.mAngularVelocity = 0;</span><br><span class="line">					this.mAngularAcceleration = 0;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					this.mInvMass = 1 / mass;</span><br><span class="line">					this.mAcceleration = gEngine.Core.mGravity;</span><br><span class="line">				&#125;</span><br><span class="line">				this.updateInertia();</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			RigidShape.prototype.updateInertia = function()&#123;</span><br><span class="line">				// subclass must define this.</span><br><span class="line">				// must work with inverted this.mInvMass</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			RigidShape.prototype.boundTest = function (otherShape) &#123;</span><br><span class="line">				var vFrom1to2  = otherShape.mCenter.subtract(this.mCenter);</span><br><span class="line">				var rSum = this.mBoundRadius + otherShape.mBoundRadius;</span><br><span class="line">				var dist = vFrom1to2.length();</span><br><span class="line">				if (dist &gt; rSum) &#123;</span><br><span class="line">					return false; // not overlapping</span><br><span class="line">				&#125;</span><br><span class="line">				return true;</span><br><span class="line">			&#125;;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var Rectangle = function(center, width, height, mass, friction, restitution)&#123;</span><br><span class="line">				RigidShape.call(this, center, mass, friction, restitution);</span><br><span class="line">				this.mType = &quot;Rectangle&quot;;</span><br><span class="line">				this.mWidth = width;</span><br><span class="line">				this.mHeight = height;</span><br><span class="line">				this.mBoundRadius = Math.sqrt(width*width + height*height)/2;</span><br><span class="line">			//    this.mFix = fix;</span><br><span class="line">				this.mVertex = [];</span><br><span class="line">				this.mFaceNormal = [];</span><br><span class="line">				</span><br><span class="line">				// 矩形的4个点</span><br><span class="line">				this.mVertex[0] = new Vec2(center.x - width / 2, center.y - height / 2); // TopLeft</span><br><span class="line">				this.mVertex[1] = new Vec2(center.x + width / 2, center.y - height / 2); // TopRight</span><br><span class="line">				this.mVertex[2] = new Vec2(center.x + width / 2, center.y + height / 2); // BottomRight</span><br><span class="line">				this.mVertex[3] = new Vec2(center.x - width / 2, center.y + height / 2); // BottomLeft</span><br><span class="line">				</span><br><span class="line">				// 矩形的4条边的法向量</span><br><span class="line">				this.mFaceNormal[0] = this.mVertex[1].subtract(this.mVertex[2]).normalize(); // Top</span><br><span class="line">				this.mFaceNormal[1] = this.mVertex[2].subtract(this.mVertex[3]).normalize(); // Right</span><br><span class="line">				this.mFaceNormal[2] = this.mVertex[3].subtract(this.mVertex[0]).normalize(); // Bottom</span><br><span class="line">				this.mFaceNormal[3] = this.mVertex[0].subtract(this.mVertex[1]).normalize(); // Left</span><br><span class="line">				</span><br><span class="line">				this.updateInertia();</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			var prototype = Object.create(RigidShape.prototype);</span><br><span class="line">			prototype.constructor = Rectangle;</span><br><span class="line">			Rectangle.prototype = prototype;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.draw = function(context)&#123;</span><br><span class="line">				context.save();</span><br><span class="line">				context.translate(this.mVertex[0].x, this.mVertex[0].y);</span><br><span class="line">				context.rotate(this.mAngle);</span><br><span class="line">				context.strokeRect(0, 0, this.mWidth, this.mHeight);</span><br><span class="line">				context.restore();</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.move = function (v) &#123;</span><br><span class="line">				var i;</span><br><span class="line">				for (i  = 0;  i &lt; this.mVertex.length; i++) &#123;</span><br><span class="line">					this.mVertex[i] = this.mVertex[i].add(v);</span><br><span class="line">				&#125;</span><br><span class="line">				this.mCenter = this.mCenter.add(v);</span><br><span class="line">				return this;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.rotate = function (angle) &#123;</span><br><span class="line">				this.mAngle += angle;</span><br><span class="line">				var i;</span><br><span class="line">				for (i = 0; i &lt; this.mVertex.length; i++) &#123;</span><br><span class="line">					this.mVertex[i] = this.mVertex[i].rotate(this.mCenter, angle);</span><br><span class="line">				&#125;</span><br><span class="line">				this.mFaceNormal[0] = this.mVertex[1].subtract(this.mVertex[2]).normalize();</span><br><span class="line">				this.mFaceNormal[1] = this.mVertex[2].subtract(this.mVertex[3]).normalize();</span><br><span class="line">				this.mFaceNormal[2] = this.mVertex[3].subtract(this.mVertex[0]).normalize();</span><br><span class="line">				this.mFaceNormal[3] = this.mVertex[0].subtract(this.mVertex[1]).normalize();</span><br><span class="line">				return this;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.collisionTest = function (otherShape, collisionInfo) &#123;</span><br><span class="line">				var status = false;</span><br><span class="line">				if (otherShape.mType === &quot;Circle&quot;) &#123;</span><br><span class="line">					status =  this.collideRectCirc(otherShape, collisionInfo);</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					status = this.collidedRectRect(this, otherShape, collisionInfo);</span><br><span class="line">				&#125;</span><br><span class="line">				return status;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.findSupportPoint = function (dir, ptOnEdge) &#123;</span><br><span class="line">				// the longest project length</span><br><span class="line">				var vToEdge;</span><br><span class="line">				var projection;</span><br><span class="line">				// initialize the computed results</span><br><span class="line">				var tmpSupport = &#123;</span><br><span class="line">					mSupportPointDist : -9999999,</span><br><span class="line">					mSupportPoint : null</span><br><span class="line">				&#125;;</span><br><span class="line">				</span><br><span class="line">				// check each vector of other object</span><br><span class="line">				var i = 0;</span><br><span class="line">				for (i = 0; i &lt; this.mVertex.length; i++) &#123;</span><br><span class="line">					vToEdge = this.mVertex[i].subtract(ptOnEdge);</span><br><span class="line">					projection = vToEdge.dot(dir);</span><br><span class="line">					// find the longest distance with certain edge</span><br><span class="line">					// dir is -n direction, so the distance should be positive</span><br><span class="line">					if (projection &gt; 0 &amp;&amp; projection &gt; tmpSupport.mSupportPointDist) &#123;</span><br><span class="line">						tmpSupport.mSupportPoint = this.mVertex[i];</span><br><span class="line">						tmpSupport.mSupportPointDist = projection;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				return tmpSupport;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.findAxisLeastPenetration = function(otherRect, collisionInfo)&#123;</span><br><span class="line">				var n;</span><br><span class="line">				var supportPoint;</span><br><span class="line">				var bestDistance = 999999;</span><br><span class="line">				var bestIndex = null;</span><br><span class="line">				var hasSupport = true;</span><br><span class="line">				var i = 0;</span><br><span class="line">				while (hasSupport &amp;&amp; i &lt; this.mFaceNormal.length)&#123;</span><br><span class="line">					// Retrieve a face normal from A</span><br><span class="line">					n = this.mFaceNormal[i];</span><br><span class="line">					// use -n as direction and</span><br><span class="line">					// the vectex on edge i as point on edge</span><br><span class="line">					var dir = n.scale(-1);</span><br><span class="line">					var ptOnEdge = this.mVertex[i];</span><br><span class="line">					// find the support on B</span><br><span class="line">					// the point has longest distance with edge i</span><br><span class="line">					var tmpSupport = otherRect.findSupportPoint(dir, ptOnEdge);</span><br><span class="line">					hasSupport = tmpSupport.mSupportPoint !== null;</span><br><span class="line">					// get the shortest support point depth</span><br><span class="line">					if (hasSupport &amp;&amp; tmpSupport.mSupportPointDist &lt; bestDistance) &#123;</span><br><span class="line">						bestDistance = tmpSupport.mSupportPointDist;</span><br><span class="line">						bestIndex = i;</span><br><span class="line">						supportPoint = tmpSupport.mSupportPoint;</span><br><span class="line">					&#125;</span><br><span class="line">					i = i + 1;</span><br><span class="line">				&#125;</span><br><span class="line">				if (hasSupport) &#123;</span><br><span class="line">					// all four directions have support point</span><br><span class="line">					var bestVec = this.mFaceNormal[bestIndex].scale(bestDistance);</span><br><span class="line">					collisionInfo.setInfo(bestDistance, this.mFaceNormal[bestIndex], supportPoint.add(bestVec));</span><br><span class="line">				&#125;</span><br><span class="line">				return hasSupport;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.collidedRectRect = function(r1, r2, collisionInfo)&#123;</span><br><span class="line">				var status1 = false;</span><br><span class="line">				var status2 = false;</span><br><span class="line">				var collisionInfoR1 = new CollisionInfo();</span><br><span class="line">				var collisionInfoR2 = new CollisionInfo();</span><br><span class="line">				// find Axis of Separation for both rectangle</span><br><span class="line">				status1 = r1.findAxisLeastPenetration(r2, collisionInfoR1);</span><br><span class="line">				if (status1) &#123;</span><br><span class="line">					status2 = r2.findAxisLeastPenetration(r1, collisionInfoR2);</span><br><span class="line">					if (status2) &#123;</span><br><span class="line">						// choose the shorter normal as the normal</span><br><span class="line">						if (collisionInfoR1.getDepth() &lt; collisionInfoR2.getDepth()) &#123;</span><br><span class="line">							var depthVec = collisionInfoR1.getNormal().scale(collisionInfoR1.getDepth());</span><br><span class="line">							collisionInfo.setInfo(collisionInfoR1.getDepth(),collisionInfoR1.getNormal(),</span><br><span class="line">							collisionInfoR1.mStart.subtract(depthVec));</span><br><span class="line">						&#125;else&#123;</span><br><span class="line">							collisionInfo.setInfo(collisionInfoR2.getDepth(),</span><br><span class="line">							collisionInfoR2.getNormal().scale(-1),</span><br><span class="line">							collisionInfoR2.mStart);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				return status1 &amp;&amp; status2;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.collideRectCirc = function (otherCir, collisionInfo)&#123;</span><br><span class="line">				// Step A: Compute the nearest edge</span><br><span class="line">				var i = 0;</span><br><span class="line">				var circ2Pos;</span><br><span class="line">				var projection;</span><br><span class="line">				var v;</span><br><span class="line">				var bestDistance = -9999999;</span><br><span class="line">				var nearestEdge;</span><br><span class="line">				var inside = false;</span><br><span class="line">				for (i = 0; i &lt; 4; i++) &#123;</span><br><span class="line">					// find the nearest edge for center of circle</span><br><span class="line">					circ2Pos = otherCir.mCenter;</span><br><span class="line">					v = circ2Pos.subtract(this.mVertex[i]);</span><br><span class="line">					projection = v.dot(this.mFaceNormal[i]);</span><br><span class="line">					if (projection &gt; 0) &#123;</span><br><span class="line">						// if the center of circle is outside of rectangle</span><br><span class="line">						bestDistance = projection;</span><br><span class="line">						nearestEdge = i;</span><br><span class="line">						inside = false;</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">					if (projection &gt; bestDistance) &#123;</span><br><span class="line">						bestDistance = projection;</span><br><span class="line">						nearestEdge = i;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				// the center of circle is outside of rectangle</span><br><span class="line">				if (!inside) &#123;</span><br><span class="line">					// Step B1: If center is in Region R1</span><br><span class="line">					// v1 is form left vertex of face to center of circle</span><br><span class="line">					// v2 is from left vertex of face to right vertex of face</span><br><span class="line">					var v1 = circ2Pos.subtract(this.mVertex[nearestEdge]);</span><br><span class="line">					var v2 = this.mVertex[(nearestEdge + 1) % 4].subtract(this.mVertex[nearestEdge]);</span><br><span class="line">					var dot = v1.dot(v2);</span><br><span class="line">					// Region R1</span><br><span class="line">					if (dot &lt; 0) &#123;</span><br><span class="line">						// the center of circle is in corner region of mVertex[nearestEdge]</span><br><span class="line">						var dis = v1.length();</span><br><span class="line">						// compare the distance with radium to decide collision</span><br><span class="line">						if (dis &gt; otherCir.mRadius) &#123;</span><br><span class="line">							return false;</span><br><span class="line">						&#125;</span><br><span class="line">						var normal = v1.normalize();</span><br><span class="line">						var radiusVec = normal.scale(-otherCir.mRadius);</span><br><span class="line">						collisionInfo.setInfo(otherCir.mRadius - dis, normal, circ2Pos.add(radiusVec));</span><br><span class="line">					&#125;</span><br><span class="line">					// Step B2: If center is in Region R2</span><br><span class="line">					else &#123;</span><br><span class="line">						// the center of circle is in corner region of mVertex[nearestEdge+1]</span><br><span class="line">						// v1 is from right vertex of face to center of circle</span><br><span class="line">						// v2 if form right vertex of face to left vertex of face</span><br><span class="line">						var v1 = circ2Pos.subtract(this.mVertex[(nearestEdge + 1) % 4]);</span><br><span class="line">						var v2 = v2.scale(-1);</span><br><span class="line">						var dot = v1.dot(v2);</span><br><span class="line">						if (dot &lt; 0) &#123;</span><br><span class="line">							var dis = v1.length();</span><br><span class="line">							if (dis &gt; otherCir.mRadius) &#123;</span><br><span class="line">								return false;</span><br><span class="line">							&#125;</span><br><span class="line">							var normal = v1.normalize();</span><br><span class="line">							var radiusVec = normal.scale(-otherCir.mRadius);</span><br><span class="line">							collisionInfo.setInfo(otherCir.mRadius - dis, normal, circ2Pos.add(radiusVec));</span><br><span class="line">						&#125; </span><br><span class="line">						// Step B3: If center is in Region R3</span><br><span class="line">						else &#123;</span><br><span class="line">							//the center of circle is in face region of face[nearestEdge]</span><br><span class="line">							if (bestDistance &lt; otherCir.mRadius) &#123;</span><br><span class="line">								var radiusVec = this.mFaceNormal[nearestEdge].scale(otherCir.mRadius);</span><br><span class="line">								collisionInfo.setInfo(otherCir.mRadius - bestDistance, this.mFaceNormal[nearestEdge], circ2Pos.subtract(radiusVec));</span><br><span class="line">							&#125;</span><br><span class="line">							else&#123;</span><br><span class="line">								return false;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					// Step C: If center is inside</span><br><span class="line">					var radiusVec = this.mFaceNormal[nearestEdge].scale(otherCir.mRadius);</span><br><span class="line">					collisionInfo.setInfo(otherCir.mRadius - bestDistance, this.mFaceNormal[nearestEdge], circ2Pos.subtract(radiusVec));</span><br><span class="line">				&#125;</span><br><span class="line">				return true;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Rectangle.prototype.updateInertia = function()&#123;</span><br><span class="line">				// Expect this.mInvMass to be already inverted!</span><br><span class="line">				if (this.mInvMass === 0) &#123;</span><br><span class="line">					this.mInertia = 0;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					// inertia = mass * width^2 + height ^2</span><br><span class="line">					this.mInertia = (1 / this.mInvMass) * (this.mWidth * this.mWidth + this.mHeight * this.mHeight) / 12;</span><br><span class="line">					this.mInertia = 1 / this.mInertia;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var Circle = function(center, radius, mass, friction, restitution)&#123;</span><br><span class="line">				RigidShape.call(this, center, mass, friction, restitution);</span><br><span class="line">				this.mType = &quot;Circle&quot;;</span><br><span class="line">				this.mRadius = radius;</span><br><span class="line">				this.mBoundRadius = radius;</span><br><span class="line">			//    this.mFix = fix;</span><br><span class="line">				// The start point of line in circle</span><br><span class="line">				this.mStartpoint = new Vec2(center.x, center.y - radius); </span><br><span class="line">				</span><br><span class="line">				this.updateInertia();</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			var prototype = Object.create(RigidShape.prototype);</span><br><span class="line">			prototype.constructor = Circle;</span><br><span class="line">			Circle.prototype = prototype;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.draw = function(context)&#123;</span><br><span class="line">				context.beginPath();</span><br><span class="line">				// draw a circle</span><br><span class="line">				context.arc(this.mCenter.x, this.mCenter.y, this.mRadius, 0, Math.PI * 2, true);</span><br><span class="line">				// draw a line form start point toward center</span><br><span class="line">				context.moveTo(this.mStartpoint.x, this.mStartpoint.y);</span><br><span class="line">				context.lineTo(this.mCenter.x, this.mCenter.y);</span><br><span class="line">				context.closePath();</span><br><span class="line">				context.stroke();</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.move = function(s)&#123;</span><br><span class="line">				this.mStartpoint = this.mStartpoint.add(s);</span><br><span class="line">				this.mCenter = this.mCenter.add(s);</span><br><span class="line">				return this;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.rotate = function (angle)&#123;</span><br><span class="line">				this.mAngle += angle;</span><br><span class="line">				this.mStartpoint = this.mStartpoint.rotate(this.mCenter, angle);</span><br><span class="line">				return this;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.collisionTest = function (otherShape, collisionInfo) &#123;</span><br><span class="line">				var status = false;</span><br><span class="line">				if (otherShape.mType === &quot;Circle&quot;) &#123;</span><br><span class="line">					status = this.collidedCircCirc(this, otherShape, collisionInfo);</span><br><span class="line">				&#125;</span><br><span class="line">				else&#123;</span><br><span class="line">					status = false;</span><br><span class="line">				&#125;</span><br><span class="line">				return status;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.collidedCircCirc = function (c1, c2, collisionInfo) &#123;</span><br><span class="line">				var vFrom1to2 = c2.mCenter.subtract(c1.mCenter);</span><br><span class="line">				var rSum = c1.mRadius + c2.mRadius;</span><br><span class="line">				var dist = vFrom1to2.length();</span><br><span class="line">				if (dist &gt; Math.sqrt(rSum * rSum)) &#123;</span><br><span class="line">					return false; // not overlapping</span><br><span class="line">				&#125;</span><br><span class="line">				if (dist !== 0) &#123;</span><br><span class="line">					// overlapping but not same position</span><br><span class="line">					var normalFrom2to1 = vFrom1to2.scale(-1).normalize();</span><br><span class="line">					var radiusC2 = normalFrom2to1.scale(c2.mRadius);</span><br><span class="line">					collisionInfo.setInfo(rSum - dist, vFrom1to2.normalize(),</span><br><span class="line">					c2.mCenter.add(radiusC2));</span><br><span class="line">				&#125;</span><br><span class="line">				else &#123;</span><br><span class="line">					// same position</span><br><span class="line">					if (c1.mRadius &gt; c2.mRadius) &#123;</span><br><span class="line">						collisionInfo.setInfo(rSum, new Vec2(0, -1),</span><br><span class="line">						c1.mCenter.add(new Vec2(0, c1.mRadius)));</span><br><span class="line">					&#125;else&#123;</span><br><span class="line">						collisionInfo.setInfo(rSum, new Vec2(0, -1),</span><br><span class="line">						c2.mCenter.add(new Vec2(0, c2.mRadius)));</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				return true;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			Circle.prototype.updateInertia = function()&#123;</span><br><span class="line">				if (this.mInvMass === 0) &#123;</span><br><span class="line">					this.mInertia = 0;</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					// this.mInvMass is inverted!!</span><br><span class="line">					// Inertia = mass * radius^2</span><br><span class="line">					// 12 is a constant value that can be changed</span><br><span class="line">					this.mInertia = (1 / this.mInvMass) * (this.mRadius * this.mRadius) / 12;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			/// 碰撞信息</span><br><span class="line">			// mDepth  = 解决碰撞的深度</span><br><span class="line">			// mNormal = 解决碰撞的方向, 碰撞向量</span><br><span class="line">			// mStart  = 碰撞向量的起点</span><br><span class="line">			// mEnd    = 碰撞向量的结束点</span><br><span class="line">			function CollisionInfo() &#123;</span><br><span class="line">				this.mDepth = 0;</span><br><span class="line">				this.mNormal = new Vec2(0, 0);</span><br><span class="line">				this.mStart = new Vec2(0, 0);</span><br><span class="line">				this.mEnd = new Vec2(0, 0);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			CollisionInfo.prototype.setNormal = function (s) &#123;</span><br><span class="line">				this.mNormal = s;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			CollisionInfo.prototype.getDepth = function () &#123;</span><br><span class="line">				return this.mDepth;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			CollisionInfo.prototype.getNormal = function () &#123;</span><br><span class="line">				return this.mNormal;</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			CollisionInfo.prototype.setInfo = function (d, n, s) &#123;</span><br><span class="line">				this.mDepth = d;</span><br><span class="line">				this.mNormal = n;</span><br><span class="line">				this.mStart = s;</span><br><span class="line">				this.mEnd = s.add(n.scale(d));</span><br><span class="line">			&#125;;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">Previous</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/page/3/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/head.png" alt="AiScarf"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">AiScarf</p><p class="is-size-6 is-block">Game Development Engineer</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">10</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/aiscarf" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/aiscarf"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Shader/"><span class="level-start"><span class="level-item">Shader</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Unity/"><span class="level-start"><span class="level-item">Unity</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%90%AD%E5%BB%BABlog/"><span class="level-start"><span class="level-item">搭建Blog</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">机器学习</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/"><span class="level-start"><span class="level-item">游戏感想</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%97%E8%AF%8D/"><span class="level-start"><span class="level-item">诗词</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">读书笔记</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-20T03:00:00.000Z">2022-03-20</time></p><p class="title"><a href="/2022/03/20/poetry_001/">《三五七言/咏蚊词》</a></p><p class="categories"><a href="/categories/%E8%AF%97%E8%AF%8D/">诗词</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-20T03:00:00.000Z">2022-03-20</time></p><p class="title"><a href="/2022/03/20/poetry_002/">《春时》</a></p><p class="categories"><a href="/categories/%E8%AF%97%E8%AF%8D/">诗词</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T02:00:00.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/game_GodOfWar4_01/">《战神4》游玩感想 (一)</a></p><p class="categories"><a href="/categories/%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/">游戏感想</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-13T11:00:00.000Z">2022-03-13</time></p><p class="title"><a href="/2022/03/13/a_intro/">博客初心</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-10T08:00:00.000Z">2022-03-10</time></p><p class="title"><a href="/2022/03/10/note_tcp/">笔记之TCP详解</a></p><p class="categories"><a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">January 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">September 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game/"><span class="tag">Game</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Life/"><span class="tag">Life</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Machinelearning/"><span class="tag">Machinelearning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Note/"><span class="tag">Note</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Poetry/"><span class="tag">Poetry</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Shader/"><span class="tag">Shader</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TCP/"><span class="tag">TCP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Unity/"><span class="tag">Unity</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2024 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
